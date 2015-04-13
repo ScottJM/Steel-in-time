@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: SIT
+        psr4_prefix: SIT
+        src_path: app
