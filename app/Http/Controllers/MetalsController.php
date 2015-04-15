@@ -7,18 +7,12 @@ use SIT\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use SIT\MetalType;
-use SIT\Products;
 
-class ProductController extends Controller {
+class MetalsController extends Controller {
 
 	protected $rules = [
-		'grade' => ['required', 'min:1', 'max:16'],
-		'metal_type_id' => ['required'],
-		'cut_type_id' => ['required'],
-		'width' => ['required', 'integer', 'min:1'],
-		'height' => ['required', 'integer', 'min:1'],
-		'length' => ['required', 'integer', 'min:1'],
-		'price' => ['required', 'numeric'],
+		'name' => ['required'],
+		'ferrous' => ['boolean'],
 	];
 
 	protected $defaultPerPage = 10;
@@ -32,9 +26,9 @@ class ProductController extends Controller {
 	{
 		$num = \Input::get('show', $this->defaultPerPage);
 
-		$products = Products::paginate($num);
+		$metals = MetalType::paginate($num);
 
-		return view('products.index', compact('products'));
+		return view('metals.index', compact('metals'));
 	}
 
 	/**
@@ -44,10 +38,7 @@ class ProductController extends Controller {
 	 */
 	public function create()
 	{
-		$metal_types = MetalType::orderBy('name')->lists('name', 'id');
-		$cut_types = CutType::orderBy('name')->lists('name', 'id');
-
-		return view('products.create', compact('metal_types', 'cut_types'));
+		return view('metals.create', compact('metal_types', 'cut_types'));
 	}
 
 	/**
@@ -59,11 +50,11 @@ class ProductController extends Controller {
 	{
 		$this->validate($request, $this->rules);
 
-		Products::create( $request->all() );
+		MetalType::create( $request->all() );
 
-		\Flash::success('You have added a product!');
+		\Flash::success('You have added a metal!');
 
-		return redirect('products');
+		return redirect('metals');
 
 	}
 
@@ -87,13 +78,9 @@ class ProductController extends Controller {
 	 */
 	public function edit($id)
 	{
-		$metal_types = MetalType::orderBy('name')->lists('name', 'id');
-		$cut_types = CutType::orderBy('name')->lists('name', 'id');
+		$metal = MetalType::findOrFail($id);
 
-		$product = Products::findOrFail($id);
-
-
-		return view('products.edit', compact('metal_types', 'cut_types', 'product'));
+		return view('metals.edit', compact('metal'));
 	}
 
 	/**
@@ -104,15 +91,15 @@ class ProductController extends Controller {
 	 */
 	public function update($id, Request $request)
 	{
-		$product = Products::findOrFail($id);
+		$metal = MetalType::findOrFail($id);
 
 		$this->validate($request, $this->rules);
 
-		$product->update( $request->all() );
+		$metal->update( $request->all() );
 
-		\Flash::success('You have edited the product!');
+		\Flash::success('You have edited the metal!');
 
-		return redirect('products');
+		return redirect('metals');
 	}
 
 	/**
@@ -131,10 +118,10 @@ class ProductController extends Controller {
 	{
 		$toDelete = \Input::get('delete');
 
-		$num = Products::destroy($toDelete);
+		$num = MetalType::destroy($toDelete);
 
-		\Flash::error("You have successfully deleted {$num} " . Str::plural('product',$num));
+		\Flash::error("You have successfully deleted {$num} " . Str::plural('metal',$num));
 
-		return redirect('products');
+		return redirect('metals');
 	}
 }

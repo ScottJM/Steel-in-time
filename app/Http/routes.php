@@ -21,4 +21,8 @@ Route::controllers([
 	'admin' => 'AdminController',
 ]);
 
+Route::post('products/delete-multiple', 'ProductController@deleteMultiple');
+
 Route::resource('products', 'ProductController');
+
+Route::resource('metals', 'MetalsController');
