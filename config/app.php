@@ -144,7 +144,8 @@ return [
 		'SIT\Providers\ConfigServiceProvider',
 		'SIT\Providers\EventServiceProvider',
 		'SIT\Providers\RouteServiceProvider',
-
+		'AdamWathan\BootForms\BootFormsServiceProvider',
+		'Laracasts\Flash\FlashServiceProvider'
 	],
 
 	/*
@@ -192,6 +193,9 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
+		'BootForm' => 'AdamWathan\BootForms\Facades\BootForm',
+		'Flash' => 'Laracasts\Flash\Flash'
+
 
 	],
 

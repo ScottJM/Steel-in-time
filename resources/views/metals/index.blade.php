@@ -7,19 +7,19 @@
 		<div class="col-md-8 col-md-offset-2">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-				    Products  <small class="text-muted">{{ $products->total() }} total</small>
-				    <div class="pull-right"><a class="btn btn-xs btn-primary" href="/products/create"><i class="glyphicon glyphicon-plus"></i> Add</a></div>
+				    Metals  <small class="text-muted">{{ $metals->total() }} total</small>
+				    <div class="pull-right"><a class="btn btn-xs btn-primary" href="/metals/create"><i class="glyphicon glyphicon-plus"></i> Add</a></div>
 				</div>
 				<div class="panel-body">
 
 
-                    @if( $products->isEmpty() )
+                    @if( $metals->isEmpty() )
 
-                    <p>No products available</p>
+                    <p>No metals available</p>
 
                     @else
 
-					{!! BootForm::open()->action('/products/delete-multiple') !!}
+					{!! BootForm::open()->action('/metals/delete-multiple') !!}
 
 					{!! BootForm::token() !!}
                     <button type="submit" class="btn btn-danger btn-sm disabled" id="delete-multiple">Delete (<span class="count">0</span>)</button>
@@ -33,45 +33,34 @@
                               <th></th>
                               <th>#</th>
                               <th>Metal</th>
-                              <th>Cut</th>
-                              <th>Grade</th>
-                              <th>Width (mm)</th>
-                              <th>Height (mm)</th>
-                              <th>Length (mm)</th>
-                              <th>Price</th>
-                              <th>In stock?</th>
+                              <th>Ferrous</th>
                               <th></th>
                             </tr>
                           </thead>
                           <tbody>
 
-                            @foreach($products as $k => $product)
+                            @foreach($metals as $k => $metal)
 								<tr>
-								  <td><input type="checkbox" name="delete[]" value="{{ $product->id }}"/></td>
-								  <th scope="row">{{ $product->id }}</th>
-								  <td>{{ $product->metal_type->name }}</td>
-								  <td>{{ $product->cut_type->name }}</td>
-								  <td>{{ $product->grade }}</td>
-								  <td>{{ $product->width }}</td>
-								  <td>{{ $product->height }}</td>
-								  <td>{{ $product->length }}</td>
-								  <td>{{ $product->price }}</td>
+								  <td><input type="checkbox" name="delete[]" value="{{ $metal->id }}"/></td>
+								  <th scope="row">{{ $metal->id }}</th>
+								  <td>{{ $metal->name }}</td>
+
 								  <td>
-								  	@if($product->in_stock == 1)
+								  	@if($metal->ferrous == 1)
 								  		<i class="glyphicon glyphicon-ok text-success"></i>
 								  	@else
 								  		<i class="glyphicon glyphicon-remove text-danger"></i>
 
 								  	@endif
 								  </td>
-								  <td  align="right"><a class="btn btn-default btn-xs" href="/products/{{ $product->id }}/edit">edit</a></td>
+								  <td align="right"><a class="btn btn-default btn-xs" href="/metals/{{ $metal->id }}/edit">edit</a></td>
 								
 								</tr>
 							@endforeach
                           </tbody>
                     </table>
 
-                    {!! $products->render() !!}
+                    {!! $metals->render() !!}
 
  					{!! BootForm::close() !!}
 					<div>
