@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOrdersTable extends Migration {
+class CreateCouponsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,9 +12,15 @@ class CreateOrdersTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('orders', function(Blueprint $table)
+		Schema::create('coupons', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->string('short_name');
+			$table->string('description');
+			$table->integer('percent_off');
+			$table->integer('amount_off');
+			$table->dateTime('start_at');
+			$table->dateTime('expiry_at');
 			$table->timestamps();
 		});
 	}
@@ -26,7 +32,7 @@ class CreateOrdersTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('orders');
+		Schema::drop('coupons');
 	}
 
 }
