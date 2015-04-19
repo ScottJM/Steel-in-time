@@ -145,7 +145,9 @@ return [
 		'SIT\Providers\EventServiceProvider',
 		'SIT\Providers\RouteServiceProvider',
 		'AdamWathan\BootForms\BootFormsServiceProvider',
-		'Laracasts\Flash\FlashServiceProvider'
+		'Laracasts\Flash\FlashServiceProvider',
+        'Barryvdh\Debugbar\ServiceProvider',
+        //'RobbieP\CloudConvertLaravel\CloudConvertLaravelServiceProvider'
 	],
 
 	/*
@@ -194,7 +196,8 @@ return [
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
 		'BootForm' => 'AdamWathan\BootForms\Facades\BootForm',
-		'Flash' => 'Laracasts\Flash\Flash'
+		'Flash' => 'Laracasts\Flash\Flash',
+        'Debugbar' => 'Barryvdh\Debugbar\Facade',
 
 
 	],
