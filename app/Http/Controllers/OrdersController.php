@@ -1,17 +1,17 @@
 <?php namespace SIT\Http\Controllers;
 
-use Illuminate\Support\Str;
-use Input;
-use SIT\CutType;
 use SIT\Http\Requests;
 use SIT\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use SIT\Orders;
 
-class CutsController extends Controller {
+class OrdersController extends Controller {
 
 	protected $rules = [
-		'name' => ['required', 'min:1', 'max:64']
+		'payment_method' => ['required', 'string', 'min:1', 'max:64'],
+		'status' => ['boolean'], // What does status reference? - Paid or sent?
+		'amount_paid' => ['required', 'numeric', 'min:1', 'max: 9999'],
 	];
 
 	protected $defaultPerPage = 10;
@@ -22,11 +22,11 @@ class CutsController extends Controller {
 	 */
 	public function index()
 	{
-		$num = Input::get('show', $this->defaultPerPage);
+		$num = \Input::get('show', $this->defaultPerPage);
 
-		$cuts = CutType::paginate($num);
+		$orders = Orders::paginate($num);
 
-		return view('cuts.index', compact('cuts'));
+		return view('orders.index', compact('orders'));
 	}
 
 	/**
@@ -36,7 +36,9 @@ class CutsController extends Controller {
 	 */
 	public function create()
 	{
-		return view('cuts.create');
+		// if we had a lookup table of payment methods, would it go here?
+		//compact('payment_method'); 
+		return view('orders.create');
 	}
 
 	/**
@@ -48,11 +50,11 @@ class CutsController extends Controller {
 	{
 		$this->validate($request, $this->rules);
 
-		CutType::create( $request->all() );
+		Orders::create( $request->all() );
 
-		\Flash::success('You have added a type of cut!');
+		\Flash::success('You have added an order!');
 
-		return redirect('cuts');
+		return redirect('orders');
 	}
 
 	/**
@@ -74,9 +76,9 @@ class CutsController extends Controller {
 	 */
 	public function edit($id)
 	{
-		$cut = CutType::findOrFail($id);
-
-		return view('cuts.edit', compact('cut'));
+		$order = Orders::findOrFail($id);
+		
+		return view('orders.edit', compact('order'));
 	}
 
 	/**
@@ -87,15 +89,15 @@ class CutsController extends Controller {
 	 */
 	public function update($id, Request $request)
 	{
-		$cut = CutType::findOrFail($id);
+		$order = Orders::findOrFail($id);
 
 		$this->validate($request, $this->rules);
 
-		$cut->update( $request->all() );
+		$order->update( $request->all() );
 
-		\Flash::success('You have edited the cut type!');
+		\Flash::success('You have edited the order!');
 
-		return redirect('cuts');
+		return redirect('orders');
 	}
 
 	/**
@@ -106,17 +108,13 @@ class CutsController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
-	}
-	
-	public function deleteMultiple()
-	{
 		$toDelete = \Input::get('delete');
 
-		$num = CutType::destroy($toDelete);
+		$num = Orders::destroy($toDelete);
 
-		\Flash::error("You have successfully deleted {$num} " . Str::plural('cut',$num));
+		\Flash::error("You have successfully deleted {$num} " . Str::plural('order',$num));
 
-		return redirect('cuts');
+		return redirect('orders');
 	}
+
 }

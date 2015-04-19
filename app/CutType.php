@@ -7,4 +7,7 @@ class CutType extends Model {
 
 	use SoftDeletes;
 
+	protected $guarded = [
+		'id'
+	];
 }
