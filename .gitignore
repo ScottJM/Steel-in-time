@@ -2,8 +2,8 @@
 /vendor
 /node_modules
 .env
-/.idea
-public/assets/vendor
+.idea/
+public/assets/vendor/
 composer.phar
 composer.lock
 .DS_Store
