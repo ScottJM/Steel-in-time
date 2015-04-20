@@ -147,6 +147,7 @@ return [
 		'AdamWathan\BootForms\BootFormsServiceProvider',
 		'Laracasts\Flash\FlashServiceProvider',
         'Barryvdh\Debugbar\ServiceProvider',
+        'Skovmand\Mailchimp\MailchimpServiceProvider',
         //'RobbieP\CloudConvertLaravel\CloudConvertLaravelServiceProvider'
 	],
 

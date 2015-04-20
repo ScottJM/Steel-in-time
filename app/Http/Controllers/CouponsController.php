@@ -73,7 +73,7 @@ class CouponsController extends Controller {
 	 * Show the form for editing the specified resource.
 	 *
 	 * @param  int  $id
-	 * @return Responsew
+	 * @return Response
 	 */
 	public function edit($id)
 	{
