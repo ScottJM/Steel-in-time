@@ -5,19 +5,51 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
-            {!! BootForm::open()->action('/orders') !!}
+            {!! BootForm::openHorizontal(4,8)->action('/orders') !!}
 
             <div class="panel panel-default">
 				<div class="panel-heading">
-				    Customer
+				    Customer details
 				</div>
 				<div class="panel-body">
 
 						{!! BootForm::text('Name', 'customer_name') !!}
+						{!! BootForm::hidden('customer_id') !!}
+                        {!! BootForm::text('Company name', 'company_name') !!}
+                        {!! BootForm::text('VAT Number', 'vat_number')->placeholder('Optional') !!}
+                        {!! BootForm::text('Email address', 'email_address') !!}
+
+                        {!! BootForm::text('Phone number', 'phone_number') !!}
+                        {!! BootForm::text('Mobile number', 'mobile_number') !!}
 
 
-				</div>
+
+                </div>
 			</div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Address Details
+                </div>
+                <div class="panel-body">
+                    {!! BootForm::textarea('Billing address', 'billing_address')->rows(3) !!}
+                    {!! BootForm::text('Billing postcode', 'billing_postcode')->addClass('postcode') !!}
+                    {!! BootForm::textarea('Shipping address', 'shipping_address')->rows(3) !!}
+                    {!! BootForm::text('Shipping postcode', 'billing_postcode')->addClass('postcode') !!}
+                </div>
+            </div>
+
+            <div class="panel panel-info" id="new_customer" style="display:none">
+                <div class="panel-heading">
+                    <h3 class="panel-title">New customer will be created</h3>
+                </div>
+                <div class="panel-body">
+                    {!! BootForm::checkbox('Receive newsletter?', 'receive_newsletter')->defaultToChecked() !!}
+                    {!! BootForm::checkbox('Create temporary password?', 'create_temporary_password')->defaultToChecked() !!}
+
+                </div>
+            </div>
+
             <div class="panel panel-default">
 				<div class="panel-heading">
 				    Order details
@@ -39,9 +71,7 @@
 
 						{!! BootForm::select('Payment method', 'payment_method')->options(['Credit card', 'Cash', 'Cheque', 'Purchase order']) !!}
 
-                      <div class="pull-right">
-                      	{!! BootForm::submit('Process order')->addClass('btn-success') !!}
-					  </div>
+                      	{!! BootForm::submit('Process order') !!}
 
 				</div>
 			</div>
@@ -55,39 +85,42 @@
 <script>
     $(function(){
 
-        var projects = [
-            {
-                value: "jquery",
-                label: "jQuery",
-                desc: "the write less, do more, JavaScript library",
-                icon: "jquery_32x32.png"
-            },
-            {
-                value: "jquery-ui",
-                label: "jQuery UI",
-                desc: "the official user interface library for jQuery",
-                icon: "jqueryui_32x32.png"
-            },
-            {
-                value: "sizzlejs",
-                label: "Sizzle JS",
-                desc: "a pure-JavaScript CSS selector engine",
-                icon: "sizzlejs_32x32.png"
-            }
-        ];
+        $( "#customer_name").bind('blur', function(){
 
-        $( "#customer_name" ).autocomplete({
+            var $customer_id = $('input[name=customer_id]');
+            console.log($customer_id.val().length)
+            if($customer_id.val().length == 0 ){
+                console.log('a')
+                $('#new_customer').fadeIn(300);
+            } else {
+                $('#new_customer').hide();
+            }
+
+        }).autocomplete({
             minLength: 0,
             source: '/customers/search',
             appendTo: $('#customer_name').parent(),
             focus: function( event, ui ) {
-                $( "#customer_name" ).val( ui.item.label );
+                var item = ui.item;
+                $( "#customer_name" ).val( item.first_name + " "+item.last_name );
+
                 return false;
             },
             select: function( event, ui ) {
-                $( "#customer_name" ).val( ui.item.label );
-               console.log('item', ui.item);
-
+                var item = ui.item;
+                $( "#customer_name" ).val( item.first_name + " "+item.last_name).attr('disabled', 'disabled').bind('dblclick' ,function(){
+                    $(this).removeAttr('disabled').val('');
+                });
+                $( "#company_name" ).val( item.company_name );
+                $( "#vat_number" ).val( item.vat_number );
+                $( "#email_address" ).val( item.email_address );
+                $( "#phone_number" ).val( item.phone_number );
+                $( "#mobile_number" ).val( item.mobile_number );
+                $( "#shipping_address" ).val( item.shipping_address );
+                $( "#billing_address" ).val( item.billing_address );
+                $( "#shipping_postcode" ).val( item.shipping_postcode );
+                $( "#billing_postcode" ).val( item.billing_postcode );
+                $('input[name=customer_id]').val(item.id);
                 return false;
             }
         }).autocomplete( "instance" )._renderItem = function( ul, item ) {
