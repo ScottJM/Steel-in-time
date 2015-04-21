@@ -8,7 +8,9 @@
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/flatly/bootstrap.min.css" rel="stylesheet">
-	<link href="{{ asset('/css/style.css') }}" rel="stylesheet">
+    <link href="/assets/vendor/jqueryuibootstrap/css/custom-theme/jquery-ui-1.10.3.theme.css" rel="stylesheet">
+
+    <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
