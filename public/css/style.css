@@ -8,3 +8,9 @@ body > .alert {
 .pagination {
     margin:20px;
 }
+.list-autocomplete, .ui-autocomplete  {
+    margin:0 !important;
+}
+.ui-autocomplete {
+    padding-left: 0;
+}

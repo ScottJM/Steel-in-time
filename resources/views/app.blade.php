@@ -19,11 +19,13 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 	<!-- Scripts -->
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="{{ asset('/assets/vendor/jquery/dist/jquery.min.js') }}"></script>
+	<script src="{{ asset('/assets/vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('/assets/vendor/jquery-ui/jquery-ui.min.js') }}"></script>
+	<script src="{{ asset('/assets/vendor/jquery-pjax/jquery.pjax.js') }}"></script>
 
 </head>
-<body>
+<body  id="pjax-container">
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -37,13 +39,16 @@
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav">
+				<ul class="nav navbar-nav pjax">
 					<li><a href="{{ url('/') }}">Home</a></li>
 					<li><a href="{{ url('/products') }}">Products</a></li>
 					<li><a href="{{ url('/metals') }}">Metals</a></li>
 					<li><a href="{{ url('/cuts') }}">Cuts</a></li>
 					<li><a href="{{ url('/orders') }}">Orders</a></li>
+
 					<li><a href="{{ url('/coupons') }}">Coupons</a></li>
+					<li><a href="{{ url('/customers') }}">Customers</a></li>
+
 
 				</ul>
 
@@ -64,9 +69,15 @@
 		</div>
 	</nav>
 
-	@include('flash::message')
 
-	@yield('content')
+        @include('flash::message')
 
+        @yield('content')
+
+    <script>
+        $(document).pjax('.pjax a, a', '#pjax-container', {
+            timeout:2000
+        })
+    </script>
 </body>
 </html>
