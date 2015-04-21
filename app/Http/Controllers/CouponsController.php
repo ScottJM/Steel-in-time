@@ -17,6 +17,7 @@ class CouponsController extends Controller {
 		'expiry_at' => ['required']
 	];
 
+	protected $defaultPerPage = 10;
 
 	/**
 	 * Display a listing of the resource.

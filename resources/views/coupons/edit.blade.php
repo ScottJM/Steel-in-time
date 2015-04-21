@@ -7,16 +7,17 @@
 		<div class="col-md-8 col-md-offset-2">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-				   Edit Order
+				   Edit Coupon
 				</div>
 				<div class="panel-body">
-					{!! BootForm::open()->put()->action('/orders/'.$order->id) !!}
+					{!! BootForm::open()->put()->action('/coupons/'.$coupon->id) !!}
 
-					{!! BootForm::bind($order) !!}
-                      {!! BootForm::text('Payment Method', 'payment_method') !!}
-					  {!! BootForm::checkbox('Has the item been sent?', 'status') !!}
-					  {!! BootForm::text('Amount Paid', 'amount_paid') !!}
-                      {!! BootForm::token() !!}
+					{!! BootForm::bind($coupon) !!}
+						{!! BootForm::text('Short Name (E.g. "ALUM25")', 'short_name') !!}
+						{!! BootForm::text('Description (Admin Use Only)', 'description') !!}
+						{!! BootForm::text('Percentage Off (Discount)', 'percent_off') !!}
+						{!! BootForm::text('Amount Off (E.g. £10.00) ', 'amount_off') !!}
+                     	 {!! BootForm::token() !!}
 					  <div class="pull-right">
                       	{!! BootForm::submit('Edit')->addClass('btn-success') !!}
 					  </div>

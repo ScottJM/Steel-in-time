@@ -7,14 +7,15 @@
 		<div class="col-md-8 col-md-offset-2">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-				    Add an order
+				    Add a coupon
 				</div>
 				<div class="panel-body">
-					{!! BootForm::open()->action('/orders') !!}
+					{!! BootForm::open()->action('/coupons') !!}
 
-						{!! BootForm::text('Payment Method', 'payment_method') !!}
-						{!! BootForm::text('Amount Paid', 'amount_paid') !!}
-						{!! BootForm::checkbox('Has the item been sent?', 'status') !!}
+						{!! BootForm::text('Short Name (E.g. "ALUM25")', 'short_name') !!}
+						{!! BootForm::text('Description (Admin Use Only)', 'description') !!}
+						{!! BootForm::text('Percentage Off (Discount)', 'percent_off') !!}
+						{!! BootForm::text('Amount Off', 'amount_off') !!}
 						{!! BootForm::token() !!}
                       <div class="pull-right">
                       	{!! BootForm::submit('Add')->addClass('btn-success') !!}

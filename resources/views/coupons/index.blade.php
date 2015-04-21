@@ -7,19 +7,19 @@
 		<div class="col-md-8 col-md-offset-2">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-				    Orders  <small class="text-muted">{{ $orders->total() }} total</small>
-				    <div class="pull-right"><a class="btn btn-xs btn-primary" href="/orders/create"><i class="glyphicon glyphicon-plus"></i> Add</a></div>
+				    Coupons  <small class="text-muted">{{ $coupons->total() }} total</small>
+				    <div class="pull-right"><a class="btn btn-xs btn-primary" href="/coupons/create"><i class="glyphicon glyphicon-plus"></i> Add</a></div>
 				</div>
 				<div class="panel-body">
 
 
-                    @if( $orders->isEmpty() )
+                    @if( $coupons->isEmpty() )
 
-                    <p>No orders available</p>
+                    <p>No coupons available</p>
 
                     @else
 
-					{!! BootForm::open()->action('/orders/delete-multiple') !!}
+					{!! BootForm::open()->action('/coupons/delete-multiple') !!}
 
 					{!! BootForm::token() !!}
                     <button type="submit" class="btn btn-danger btn-sm disabled" id="delete-multiple">Delete (<span class="count">0</span>)</button>
@@ -27,7 +27,7 @@
                     </div>
  					{!! BootForm::open() !!}
 
-                    {!! $orders->render() !!}
+                    {!! $coupons->render() !!}
 
  					{!! BootForm::close() !!}
 					<div>

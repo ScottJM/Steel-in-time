@@ -15,8 +15,6 @@
 					{!! BootForm::bind($product) !!}
    					  {!! BootForm::select('Metal Type', 'metal_type_id')->options( $metal_types ) !!}
    					  {!! BootForm::select('Cut Type', 'cut_type_id')->options( $cut_types ) !!}
-
-
                       {!! BootForm::text('Grade', 'grade') !!}
                       {!! BootForm::text('Width (mm)', 'width') !!}
                       {!! BootForm::text('Height (mm)', 'height') !!}

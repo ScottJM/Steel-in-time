@@ -2,7 +2,7 @@
 /vendor
 /node_modules
 .env
-/.idea
+.idea/
 =======
 # Windows image file caches
 Thumbs.db
