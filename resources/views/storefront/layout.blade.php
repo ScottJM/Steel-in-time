@@ -11,6 +11,8 @@
     <link href="/assets/vendor/jqueryuibootstrap/css/custom-theme/jquery-ui-1.10.3.theme.css" rel="stylesheet">
     <link href="/assets/vendor/select2/select2.css" rel="stylesheet">
     <link href="/assets/vendor/select2/select2-bootstrap.css" rel="stylesheet">
+    <link href="/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/storefront.css" rel="stylesheet">
 
 
     <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
@@ -29,10 +31,20 @@
 	<script src="{{ asset('/assets/vendor/jquery-ui/jquery-ui.min.js') }}"></script>
 	<script src="{{ asset('/assets/vendor/jquery-pjax/jquery.pjax.js') }}"></script>
 	<script src="/assets/vendor/select2/select2.min.js"></script>
+	<script src="/assets/vendor/angular/angular.min.js"></script>
+	<script src="/assets/vendor/angular-route/angular-route.min.js"></script>
+	<script src="/assets/vendor/angular-bootstrap/ui-bootstrap.min.js"></script>
+	<script src="/assets/vendor/angular-resource/angular-resource.min.js"></script>
+	<script src="/assets/vendor/angular-bootstrap-show-errors/src/showErrors.min.js"></script>
 	<script src="/js/helpers.js"></script>
+	<script src="/js/app.js"></script>
+	<script src="/js/app.services.js"></script>
+	<script src="/js/app.routes.js"></script>
+	<script src="/js/app.controllers.js"></script>
 
 </head>
-<body  id="pjax-container">
+<body ng-app="SIT"  ng-controller="AppCtrl">
+<div class="wrapper">
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -46,45 +58,42 @@
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav pjax">
-					<li><a href="{{ url('/') }}">Home</a></li>
-					<li><a href="{{ url('/products') }}">Products</a></li>
-					<li><a href="{{ url('/metals') }}">Metals</a></li>
-					<li><a href="{{ url('/cuts') }}">Cuts</a></li>
-					<li><a href="{{ url('/orders') }}">Orders</a></li>
+				<ul class="nav navbar-nav pjax" id="main-nav">
+					<li><a href="{{ url('/store/') }}"><span>Home</span></a></li>
+					<li><a href="{{ url('/store/#about') }}"><span>About</span></a></li>
+					<li><a href="{{ url('/store/#products') }}"><span>Products</span></a></li>
+					<li><a href="{{ url('/store/#contact') }}"><span>Contact</span></a></li>
 
-					<li><a href="{{ url('/coupons') }}">Coupons</a></li>
-					<li><a href="{{ url('/customers') }}">Customers</a></li>
 
 
 				</ul>
+
+
 
 				<ul class="nav navbar-nav navbar-right">
 					@if (Auth::guest())
-						<li><a href="{{ url('/auth/login') }}">Login</a></li>
-						<li><a href="{{ url('/auth/register') }}">Register</a></li>
+						<li><a href="{{ url('/auth/login') }}" class="nav-action">Login</a></li>
 					@else
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="{{ url('/auth/logout') }}">Logout</a></li>
-							</ul>
-						</li>
-					@endif
+                        <li><a href="{{ url('/home') }}" class="nav-action">Account</a></li>
+
+                    @endif
 				</ul>
+
+                <div class="navbar-right" id="help-box">
+                    <a href="mailto:{{ config('steelintime.infoemail') }}">{{ config('steelintime.infoemail') }}</a><br/>
+                    <strong>{{ config('steelintime.phonenumber') }}</strong>
+                </div>
 			</div>
 		</div>
 	</nav>
 
 
-        @include('flash::message')
 
         @yield('content')
 
-    <script>
-        $(document).pjax('.pjax a, a', '#pjax-container', {
-            timeout:2000
-        })
-    </script>
+   {{--footer--}}
+    @include('storefront.footer')
+
+    </div>
 </body>
 </html>

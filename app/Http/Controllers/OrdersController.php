@@ -1,17 +1,24 @@
 <?php namespace SIT\Http\Controllers;
 
+use Illuminate\Foundation\Bus\DispatchesCommands;
+use SIT\Commands\NewOrder;
 use SIT\Http\Requests;
 use SIT\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use SIT\Orders;
+use SIT\Products;
 
 class OrdersController extends Controller {
 
+    use DispatchesCommands;
+
 	protected $rules = [
+		'customer_name' => ['required'],
+		'email_address' => ['required', 'email'],
+		'billing_postcode' => ['required'],
 		'payment_method' => ['required', 'string', 'min:1', 'max:64'],
-		'status' => ['boolean'], // What does status reference? - Paid or sent?
-		'amount_paid' => ['required', 'numeric', 'min:1', 'max: 9999'],
+		'status' => ['boolean'], // What does status reference? - Paid or sen
 	];
 
 	protected $defaultPerPage = 10;
@@ -36,9 +43,8 @@ class OrdersController extends Controller {
 	 */
 	public function create()
 	{
-		// if we had a lookup table of payment methods, would it go here?
-		//compact('payment_method'); 
-		return view('orders.create');
+		$products = Products::with('metal_type', 'cut_type')->where('in_stock', '=', 1)->get();
+		return view('orders.create', compact('products'));
 	}
 
 	/**
@@ -50,7 +56,11 @@ class OrdersController extends Controller {
 	{
 		$this->validate($request, $this->rules);
 
-		Orders::create( $request->all() );
+        $data = $request->all();
+
+        $this->dispatch(
+            new NewOrder($data)
+        );
 
 		\Flash::success('You have added an order!');
 
