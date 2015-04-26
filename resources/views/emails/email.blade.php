@@ -225,6 +225,7 @@
                     <tr>
                         <td>
                             @yield('content')
+                            <p>&nbsp;</p>
 
                             <!-- Callout Panel -->
                             <p class="callout">

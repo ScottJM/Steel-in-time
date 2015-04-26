@@ -2,10 +2,13 @@
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Laracasts\Presenter\PresentableTrait;
 
 class Products extends Model {
 
-	use SoftDeletes;
+	use SoftDeletes, PresentableTrait;
+
+    protected $presenter = 'SIT\Presenters\ProductPresenter';
 
 	protected $guarded = ['id'];
 

@@ -3,10 +3,14 @@
 Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
+Route::get('template/{template}', 'TemplateController@show');
+Route::get('login', 'Auth\AuthController@getLogin');
+Route::get('logout', 'Auth\AuthController@getLogout');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
+	'store' => 'Storefront\IndexController',
 	'admin' => 'AdminController',
 ]);
 
