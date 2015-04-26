@@ -5,6 +5,10 @@ App.config(['$routeProvider',
                 templateUrl: '/template/home.html',
                 controller: 'HomeCtrl'
             }).
+            when('/contact', {
+                templateUrl: '/template/contact.html',
+                controller: 'ContactCtrl'
+            }).
             //when('/servers/:serverId/livelog', {
             //    templateUrl: '/template/livelog.html',
             //    controller: 'ServerLiveLogCtrl'

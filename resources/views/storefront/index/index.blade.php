@@ -4,7 +4,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2" ng-view>
+            <div class="col-md-10 col-md-offset-1" ng-view>
 
             </div>
         </div>

@@ -34,8 +34,10 @@
 	<script src="/assets/vendor/angular/angular.min.js"></script>
 	<script src="/assets/vendor/angular-route/angular-route.min.js"></script>
 	<script src="/assets/vendor/angular-bootstrap/ui-bootstrap.min.js"></script>
+	<script src="/assets/vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 	<script src="/assets/vendor/angular-resource/angular-resource.min.js"></script>
 	<script src="/assets/vendor/angular-bootstrap-show-errors/src/showErrors.min.js"></script>
+	<script src="/assets/vendor/angular-bootstrap-select/src/angular-bootstrap-select.js"></script>
 	<script src="/js/helpers.js"></script>
 	<script src="/js/app.js"></script>
 	<script src="/js/app.services.js"></script>

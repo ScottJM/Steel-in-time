@@ -169,3 +169,117 @@ html, body {
   height: 340px;
 
 }
+.form-control {
+  border-radius:0 !important;
+  border-top-left-radius:0 !important;
+  border-top-right-radius:0 !important;
+  border-bottom-left-radius:0 !important;
+  border-bottom-right-radius:0 !important;
+}
+.carousel-caption {
+  float:left;
+  left:0;
+  top:20px;
+  z-index: 999;
+  width:50%;
+  text-align: left;
+  text-shadow: none;
+  color:@steel-blue;
+  .btn {
+    margin-right:10px;
+  }
+  h4 {
+    font-size: 2.5em;
+    font-weight: normal;
+  }
+  p {
+    margin-top:30px;
+  }
+}
+.carousel-image {
+  float:right;
+  margin-right:0;
+  margin-top:40px;
+  max-width: 400px !important;
+}
+.carousel-control.left, .carousel-control.right  {
+  background-image: none !important;
+}
+.carousel-control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  opacity: 1;
+  filter: alpha(opacity=50);
+  font-size: 20px;
+  color:  @steel-red;
+  text-align: center;
+  text-shadow: none;
+
+  &:hover {
+    color: @steel-blue;
+  }
+}
+
+.carousel-control.left {
+  left:-60px
+}
+
+.carousel-control.right {
+  right:-60px
+}
+.carousel-inner, .carousel  {
+  height:100%;
+}
+.btn {
+  border-radius: 0 !important;
+}
+.btn-default {
+  background-color: @steel-red;
+  border-color: @steel-red;
+}
+#multiSelect {
+  button.btn-primary{
+
+    background-color:#fff;
+    color: @steel-blue;
+    text-align: left;
+
+  }
+
+  .btn .caret {
+    margin-left: 0;
+    float: right;
+    margin-top: 8px;
+    color:@steel-red;
+  }
+
+
+}
+
+#quickShop{
+  margin-top:40px;
+}
+.red-head {
+  color: @steel-red;
+  margin-top:50px;
+  margin-bottom: 30px;
+}
+#sidebar {
+  a{
+
+    color:@steel-blue;
+  }
+  font-size: 14px;
+  h4 {
+    font-size: 14px;
+    margin-top:40px;
+    &:first-child {
+      margin-top:0;
+    }
+    text-transform: uppercase;
+    color:@steel-red;
+  }
+}
