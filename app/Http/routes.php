@@ -3,10 +3,20 @@
 Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
+Route::get('template/{template}', 'TemplateController@show');
+Route::get('login', 'Auth\AuthController@getLogin');
+Route::get('logout', 'Auth\AuthController@getLogout');
+
+Route::get('store/product/grades', 'Storefront\ProductController@grades');
+Route::resource('store/product', 'Storefront\ProductController');
+Route::resource('store/metal', 'Storefront\MetalController');
+Route::resource('store/cut', 'Storefront\CutController');
+
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
+	'store' => 'Storefront\IndexController',
 	'admin' => 'AdminController',
 ]);
 
@@ -20,9 +30,13 @@ Route::get('customers/postcode-search', 'CustomersController@postCodeSearch');
 Route::get('customers/search', 'CustomersController@search');
 
 
+
+
 Route::resource('products', 'ProductController');
 Route::resource('metals', 'MetalsController');
 Route::resource('cuts', 'CutsController');
 Route::resource('orders', 'OrdersController');
 Route::resource('coupons', 'CouponsController');
 Route::resource('customers', 'CustomersController');
+
+

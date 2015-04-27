@@ -20,7 +20,7 @@
                                           {!! BootForm::textarea('Billing address', 'billing_address')->rows(3) !!}
                                           {!! BootForm::text('Billing postcode', 'billing_postcode')->addClass('postcode') !!}
                                           {!! BootForm::textarea('Shipping address', 'shipping_address')->rows(3) !!}
-                                          {!! BootForm::text('Shipping postcode', 'billing_postcode')->addClass('postcode') !!}
+                                          {!! BootForm::text('Shipping postcode', 'shipping_postcode')->addClass('postcode') !!}
                                           {!! BootForm::text('Phone number', 'phone_number') !!}
                                           {!! BootForm::text('Mobile number', 'mobile_number') !!}
 
@@ -37,27 +37,7 @@
 	</div>
 </div>
 <script>
-    $(function(){
-        $('.postcode').autocomplete({
-            minLength: 0,
-            source: '/customers/postcode-search',
-            appendTo: $(this).parent(),
-            focus: function( event, ui ) {
-                $( this ).val( ui.item.label );
-                return false;
-            },
-            select: function( event, ui ) {
-                $( this ).val( ui.item.label );
-                console.log('item', ui.item);
 
-                return false;
-            }
-        }).autocomplete( "instance" )._renderItem = function( ul, item ) {
-            return $( "<li class='list-group-item list-autocomplete'>" )
-                    .append( "<a>" + item.label + "</a>" )
-                    .appendTo( ul );
-        };
-    })
 </script>
 
 @endsection

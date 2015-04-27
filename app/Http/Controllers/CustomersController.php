@@ -1,6 +1,8 @@
 <?php namespace SIT\Http\Controllers;
 
+use Illuminate\Foundation\Bus\DispatchesCommands;
 use Illuminate\Support\Str;
+use SIT\Commands\CreateCustomer;
 use SIT\Core\NewsletterManager;
 use SIT\Http\Requests;
 use SIT\Http\Controllers\Controller;
@@ -10,6 +12,8 @@ use SIT\Customer;
 use SIT\User;
 
 class CustomersController extends Controller {
+
+    use DispatchesCommands;
 
     private $newsletterManager;
 
@@ -87,27 +91,9 @@ $result = json_decode($resp);
 
         $data = $request->all();
 
-        if($request->get('receive_newsletter') == 1) {
-
-            $this->newsletterManager->addEmailToList($data['email_address']);
-
-        }
-
-        if($request->get('create_temporary_password') == 1) {
-            $tempPassword = $this->temporaryPassword();
-            $user = User::create([
-                'name' => $request->get('first_name') .' '. $request->get('last_name'),
-                'email' => $request->get('email_address'),
-                'password' => bcrypt($tempPassword)
-            ]);
-            $data['user_id'] = $user->id;
-
-            //send temporary password via email
-        }
-
-        unset($data['create_temporary_password']);
-
-        Customer::create( $data );
+        $this->dispatch(
+            new CreateCustomer($data)
+        );
 
         \Flash::success('You have added a customer!');
 
@@ -115,17 +101,6 @@ $result = json_decode($resp);
 
     }
 
-    public function temporaryPassword()
-    {
-            $alphabet = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789";
-            $pass = array();
-            $alphaLength = strlen($alphabet) - 1;
-            for ($i = 0; $i < 8; $i++) {
-                $n = rand(0, $alphaLength);
-                $pass[] = $alphabet[$n];
-            }
-            return implode($pass);
-    }
 
 
     /**

@@ -32,7 +32,7 @@ class ProductController extends Controller {
 	{
 		$num = \Input::get('show', $this->defaultPerPage);
 
-		$products = Products::paginate($num);
+		$products = Products::with('metal_type', 'cut_type')->paginate($num);
 
 		return view('products.index', compact('products'));
 	}

@@ -1,0 +1,1 @@
+<h1>@{{ product.description }}</h1>
