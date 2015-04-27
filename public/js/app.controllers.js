@@ -35,9 +35,15 @@ App.
                 });
             }
 
-        }
+        };
         $scope.viewProduct = function(product) {
             $location.url('/product/'+product.id+'/view');
+        };
+        $scope.viewMetal = function(metal) {
+            $location.url('/metal/'+metal.id+'/view');
+        };
+        $scope.viewCut = function(cut) {
+            $location.url('/cut/'+cut+'/view');
         }
 
     }])
