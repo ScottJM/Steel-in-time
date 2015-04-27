@@ -12,6 +12,8 @@ class Products extends Model {
 
 	protected $guarded = ['id'];
 
+    protected $appends = ['size'];
+
 	public function metal_type()
 	{
 		return $this->belongsTo('SIT\MetalType');
@@ -22,5 +24,16 @@ class Products extends Model {
 		return $this->belongsTo('SIT\CutType');
 
 	}
+
+
+    public function getSizeAttribute()
+    {
+        return $this->attributes['width'] . 'mm x '. $this->attributes['height'] . 'mm';
+    }
+
+    public function getDescriptionAttribute()
+    {
+        return $this->present()->description;
+    }
 
 }

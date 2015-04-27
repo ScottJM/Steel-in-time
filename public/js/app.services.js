@@ -1,25 +1,46 @@
 
 angular.module('SIT.services', [])
-    .factory('Server', function($resource) {
-        return $resource('/api/v1/server/:id', { id: '@id' }, {
+    .factory('Product', function($resource) {
+        return $resource('/store/product/:id', { id: '@id' }, {
             update: {
                 method: 'PUT' // this method issues a PUT request
             },
-            validate: {
+            search: {
                 method: 'POST',
-                url: '/api/v1/server/validate/:field/:value',
-                responseType: 'json'
-            }
-            ,
-            cvar: {
-                method: 'GET',
-                url: '/api/v1/server/:id/cvar/:field',
-                responseType: 'json'
+                url: '/store/product/search/:value',
+                responseType: 'json',
+                isArray:true
             },
-            listener: {
-                method: 'POST',
-                url: '/api/v1/server/:id/listener',
-                responseType: 'json'
+            grades: {
+                method: 'GET',
+                url: '/store/product/grades',
+                responseType: 'json',
             }
         });
-});
+    })
+    .factory('Metal', function($resource) {
+        return $resource('/store/metal/:id', { id: '@id' }, {
+            update: {
+                method: 'PUT' // this method issues a PUT request
+            },
+            search: {
+                method: 'POST',
+                url: '/store/metal/search/:value',
+                responseType: 'json',
+                isArray:true
+            }
+        });
+    })
+    .factory('Cut', function($resource) {
+        return $resource('/store/cut/:id', { id: '@id' }, {
+            update: {
+                method: 'PUT' // this method issues a PUT request
+            },
+            search: {
+                method: 'POST',
+                url: '/store/cut/search/:value',
+                responseType: 'json',
+                isArray:true
+            }
+        });
+    });

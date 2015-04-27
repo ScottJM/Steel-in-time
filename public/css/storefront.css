@@ -238,6 +238,9 @@ body {
 #quickShop {
   margin-top: 40px;
 }
+.col-md-2 {
+  margin-bottom: 30px;
+}
 .red-head {
   color: #e74c3c;
   margin-top: 50px;
