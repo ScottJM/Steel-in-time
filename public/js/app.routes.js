@@ -9,10 +9,10 @@ App.config(['$routeProvider',
                 templateUrl: '/template/contact.html',
                 controller: 'ContactCtrl'
             }).
-            //when('/servers/:serverId/livelog', {
-            //    templateUrl: '/template/livelog.html',
-            //    controller: 'ServerLiveLogCtrl'
-            //}).
+            when('/product/:productId/view', {
+                templateUrl: '/template/product-single.html',
+                controller: 'ProductSingleCtrl'
+            }).
             otherwise({
                 redirectTo: '/home'
             });

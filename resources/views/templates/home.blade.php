@@ -21,50 +21,42 @@
             <!-- Single button -->
             <div class="btn-group btn-block" dropdown >
                 <button type="button" class="btn btn-primary btn-block dropdown-toggle" dropdown-toggle >
-                    Metal <span class="caret"></span>
+                    @{{ selected.metal ? selected.metal.name : 'Metal' }} <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li><a href="#">Separated link</a></li>
+                    <li ng-repeat="metal in metals"><a href="" ng-click="select('metal', metal) ">@{{ metal.name }}</a></li>
                 </ul>
             </div>
         </div>
         <div class="col-md-3">
             <div class="btn-group btn-block" dropdown>
-                <button type="button" class="btn btn-primary btn-block dropdown-toggle" dropdown-toggle >
-                    Grade <span class="caret"></span>
+                <button type="button" class="btn btn-primary btn-block dropdown-toggle" dropdown-toggle ng-disabled="!selected.metal" >
+                    @{{ selected.grade ? selected.grade : 'Grade' }}  <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu" dropdown-menu>
-                    <li><a href="#">Action</a></li>
+                    <li ng-repeat="grade in grades"><a href="" ng-click="select('grade', grade) ">@{{ grade }}</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="btn-group btn-block" dropdown >
+                <button type="button" class="btn btn-primary btn-block dropdown-toggle" dropdown-toggle  ng-disabled="!selected.grade">
+                    @{{ selected.cut ? selected.cut.name : 'Cut type' }} <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li ng-repeat="cut in cuts"><a href="" ng-click="select('cut', cut) ">@{{ cut.name }}</a></li>
 
                 </ul>
             </div>
         </div>
         <div class="col-md-3">
             <div class="btn-group btn-block" dropdown >
-                <button type="button" class="btn btn-primary btn-block dropdown-toggle" dropdown-toggle >
-                    Cut type <span class="caret"></span>
+                <button type="button" class="btn btn-primary btn-block dropdown-toggle" dropdown-toggle  ng-disabled="!selected.cut">
+                    @{{ selected.size ? selected.size : 'Size' }} <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li><a href="#">Separated link</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="btn-group btn-block" dropdown >
-                <button type="button" class="btn btn-primary btn-block dropdown-toggle" dropdown-toggle >
-                    Size <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li><a href="#">Separated link</a></li>
+                    <li ng-repeat="product in products"><a href="" ng-click="viewProduct(product) ">@{{ product.size }}</a></li>
+
                 </ul>
             </div>
         </div>
@@ -73,4 +65,54 @@
 
 <div id="quickShop">
     <h3 style="margin-bottom: 30px">Quick Shop</h3>
+    <div class="row text-center">
+        <div class="col-md-2">
+            <img src="/img/cuts/roundbar.png" alt="roundbar" /><br/>
+            Round Bar
+        </div>
+        <div class="col-md-2">
+            <img src="/img/cuts/roundbar.png" alt="roundbar" /><br/>
+            Round Bar
+        </div>
+        <div class="col-md-2">
+            <img src="/img/cuts/roundbar.png" alt="roundbar" /><br/>
+            Round Bar
+        </div>
+        <div class="col-md-2">
+            <img src="/img/cuts/roundbar.png" alt="roundbar" /><br/>
+            Round Bar
+        </div>
+        <div class="col-md-2">
+            <img src="/img/cuts/roundbar.png" alt="roundbar" /><br/>
+            Round Bar
+        </div>
+        <div class="col-md-2">
+            <img src="/img/cuts/roundbar.png" alt="roundbar" /><br/>
+            Round Bar
+        </div>
+        <div class="col-md-2">
+            <img src="/img/cuts/roundbar.png" alt="roundbar" /><br/>
+            Round Bar
+        </div>
+        <div class="col-md-2">
+            <img src="/img/cuts/roundbar.png" alt="roundbar" /><br/>
+            Round Bar
+        </div>
+        <div class="col-md-2">
+            <img src="/img/cuts/roundbar.png" alt="roundbar" /><br/>
+            Round Bar
+        </div>
+        <div class="col-md-2">
+            <img src="/img/cuts/roundbar.png" alt="roundbar" /><br/>
+            Round Bar
+        </div>
+        <div class="col-md-2">
+            <img src="/img/cuts/roundbar.png" alt="roundbar" /><br/>
+            Round Bar
+        </div>
+        <div class="col-md-2">
+            <img src="/img/cuts/roundbar.png" alt="roundbar" /><br/>
+            Round Bar
+        </div>
+    </div>
 </div>
