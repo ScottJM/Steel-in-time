@@ -45,7 +45,6 @@
 					<li><a href="{{ url('/metals') }}">Metals</a></li>
 					<li><a href="{{ url('/cuts') }}">Cuts</a></li>
 					<li><a href="{{ url('/orders') }}">Orders</a></li>
-
 					<li><a href="{{ url('/coupons') }}">Coupons</a></li>
 					<li><a href="{{ url('/customers') }}">Customers</a></li>
 
