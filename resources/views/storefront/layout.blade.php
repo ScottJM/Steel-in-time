@@ -69,7 +69,9 @@
 
 				</ul>
 
-
+                <div class="navbar-right" ng-controller="CartCtrl" id="basket">
+                    <a href="" ng-click="viewCart()"><i class="glyphicon glyphicon-shopping-cart"></i> View cart (<span ng-bind="cartItems.length"></span>)</a>
+                </div>
 
 				<ul class="nav navbar-nav navbar-right">
 					@if (Auth::guest())

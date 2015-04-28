@@ -36,6 +36,9 @@ App.
             }
 
         };
+
+        $scope.cartItems = [];
+
         $scope.viewProduct = function(product) {
             $location.url('/product/'+product.id+'/view');
         };
@@ -48,6 +51,11 @@ App.
 
     }])
     .controller('ProductSearchCtrl', function($scope, $modal, $log, Product, $location) {
+
+
+
+    })
+    .controller('CartCtrl', function($scope, $modal, $log, Product, $location) {
 
 
 
