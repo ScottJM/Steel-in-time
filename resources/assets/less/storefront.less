@@ -240,7 +240,7 @@ html, body {
   background-color: @steel-red;
   border-color: @steel-red;
 }
-#multiSelect {
+#multiSelect, #help {
   button.btn-primary{
 
     background-color:#fff;
@@ -284,5 +284,20 @@ html, body {
     }
     text-transform: uppercase;
     color:@steel-red;
+  }
+}
+
+.cut-type-box {
+  &:hover {
+    cursor: pointer;
+    filter: hue-rotate(150deg);
+  }
+
+
+}
+
+#help {
+  p {
+    margin:30px 0;
   }
 }
