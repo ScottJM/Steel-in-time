@@ -46,7 +46,7 @@ class MetalController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+        return MetalType::findOrFail($id);
 	}
 
 	/**

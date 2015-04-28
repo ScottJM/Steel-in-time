@@ -116,6 +116,7 @@ App.
             $location.url('/product/'+product.id+'/view');
         };
         $scope.viewMetal = function(metal) {
+            console.log('/metal/'+metal.id+'/view');
             $location.url('/metal/'+metal.id+'/view');
         };
         $scope.viewCut = function(cut) {
@@ -139,6 +140,14 @@ App.
         var id = $routeParams.productId;
         $scope.product = Product.get({id:id });
         $scope.qty = 1;
+
+
+    })
+    .controller('MetalSingleCtrl', function($scope, $modal, $log, Product, Metal, $location, $routeParams) {
+
+        var id = $routeParams.metalId;
+        $scope.metal = Metal.get({id:id });
+
 
 
     })
