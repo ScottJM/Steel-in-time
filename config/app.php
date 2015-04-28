@@ -148,7 +148,7 @@ return [
 		'Laracasts\Flash\FlashServiceProvider',
         'Barryvdh\Debugbar\ServiceProvider',
         'Skovmand\Mailchimp\MailchimpServiceProvider',
-        //'RobbieP\CloudConvertLaravel\CloudConvertLaravelServiceProvider'
+        'Darryldecode\Cart\CartServiceProvider'
 	],
 
 	/*
@@ -199,7 +199,7 @@ return [
 		'BootForm' => 'AdamWathan\BootForms\Facades\BootForm',
 		'Flash' => 'Laracasts\Flash\Flash',
         'Debugbar' => 'Barryvdh\Debugbar\Facade',
-
+        'Cart' => 'Darryldecode\Cart\Facades\CartFacade'
 
 	],
 

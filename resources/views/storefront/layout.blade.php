@@ -69,7 +69,9 @@
 
 				</ul>
 
-
+                <div class="navbar-right" ng-controller="CartCtrl" id="basket">
+                    <a href="" ng-click="viewCart()"><i class="glyphicon glyphicon-shopping-cart"></i> View cart (<span ng-bind="cartItems.length"></span>)</a>
+                </div>
 
 				<ul class="nav navbar-nav navbar-right">
 					@if (Auth::guest())
@@ -87,7 +89,7 @@
 			</div>
 		</div>
 	</nav>
-
+    <div class="alert alert-success" ng-show="alert != null" >@{{ alert.text }} <a href="" ng-click="alert.action()" class="alert-link" ng-show="alert.action">[@{{ alert.actionLabel }}]</a></div>
 
 
         @yield('content')

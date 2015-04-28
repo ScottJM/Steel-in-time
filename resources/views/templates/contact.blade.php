@@ -9,24 +9,28 @@
                     src="https://www.google.com/maps/embed/v1/place?q=Harlow%2C%20England%20CM19%205BN%2C%20United%20Kingdom&key=AIzaSyCfsx76Cg2_gQ7KX1uHATpqxemypi1kcJg"></iframe>
 
             <hr/>
-
-            <div class="row">
-                <div class="col-md-6 form-group">
-                    <label for="">Name</label>
-                    <input class="form-control" type="text" />
+            <div ng-hide="messageSent">
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="">Name</label>
+                        <input class="form-control" type="text" />
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="">Email</label>
+                        <input class="form-control" type="text" />
+                    </div>
                 </div>
-                <div class="col-md-6 form-group">
-                    <label for="">Email</label>
-                    <input class="form-control" type="text" />
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="">Message</label>
+                        <textarea class="form-control" name="" id="" rows="4"></textarea>
+                        <div class="clearfix"></div>
+                        <p><a class="btn btn-default" href="" ng-click="messageSent = true">Send</a></p>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <label for="">Message</label>
-                    <textarea class="form-control" name="" id="" rows="4"></textarea>
-                    <div class="clearfix"></div>
-                    <p><a class="btn btn-default" href="">Send</a></p>
-                </div>
+            <div ng-show="messageSent">
+                <h3 class="text-success"><i class="glyphicon glyphicon-ok"></i> Thank you for your message!</h3>
             </div>
 
 
