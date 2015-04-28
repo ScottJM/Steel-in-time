@@ -9,6 +9,10 @@ App.config(['$routeProvider',
                 templateUrl: '/template/contact.html',
                 controller: 'ContactCtrl'
             }).
+            when('/cart', {
+                templateUrl: '/template/cart.html',
+                controller: 'CartCtrl'
+            }).
             when('/product/:productId/view', {
                 templateUrl: '/template/product-single.html',
                 controller: 'ProductSingleCtrl'

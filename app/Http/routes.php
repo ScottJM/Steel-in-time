@@ -9,6 +9,7 @@ Route::get('logout', 'Auth\AuthController@getLogout');
 
 Route::get('store/product/grades', 'Storefront\ProductController@grades');
 Route::resource('store/product', 'Storefront\ProductController');
+Route::resource('store/cart', 'Storefront\CartController');
 Route::resource('store/metal', 'Storefront\MetalController');
 Route::resource('store/cut', 'Storefront\CutController');
 

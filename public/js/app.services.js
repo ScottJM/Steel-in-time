@@ -43,4 +43,17 @@ angular.module('SIT.services', [])
                 isArray:true
             }
         });
+    })
+    .factory('CartItem', function($resource) {
+        return $resource('/store/cart/:id', { id: '@id' }, {
+            update: {
+                method: 'PUT' // this method issues a PUT request
+            },
+            search: {
+                method: 'POST',
+                url: '/store/cart/search/:value',
+                responseType: 'json',
+                isArray:true
+            }
+        });
     });

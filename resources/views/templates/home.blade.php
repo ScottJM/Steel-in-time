@@ -66,51 +66,51 @@
 <div id="quickShop">
     <h3 style="margin-bottom: 30px">Quick Shop</h3>
     <div class="row text-center">
-        <div class="col-md-2 cut-type-box" ng-click="viewCut('roundbar')">
+        <div class="col-sm-2 cut-type-box" ng-click="viewCut('roundbar')">
             <img src="/img/cuts/roundbar.png" alt="roundbar" /><br/>
             Round Bar
         </div>
-        <div class="col-md-2 cut-type-box" ng-click="viewCut('boxsection')">
+        <div class="col-sm-2 cut-type-box" ng-click="viewCut('boxsection')">
             <img src="/img/cuts/boxsection.png" alt="roundbar" /><br/>
             Box Section
         </div>
-        <div class="col-md-2 cut-type-box" ng-click="viewCut('tube')">
+        <div class="col-sm-2 cut-type-box" ng-click="viewCut('tube')">
             <img src="/img/cuts/tube.png" alt="roundbar" /><br/>
             Tube
         </div>
-        <div class="col-md-2 cut-type-box" ng-click="viewCut('tsection')">
+        <div class="col-sm-2 cut-type-box" ng-click="viewCut('tsection')">
             <img src="/img/cuts/tsection.png" alt="roundbar" /><br/>
             T-Section
         </div>
-        <div class="col-md-2 cut-type-box" ng-click="viewCut('rsj')">
+        <div class="col-sm-2 cut-type-box" ng-click="viewCut('rsj')">
             <img src="/img/cuts/rsj.png" alt="roundbar" /><br/>
             RSJs
         </div>
-        <div class="col-md-2 cut-type-box" ng-click="viewCut('channel')">
+        <div class="col-sm-2 cut-type-box" ng-click="viewCut('channel')">
             <img src="/img/cuts/channel.png" alt="roundbar" /><br/>
             Channel
         </div>
-        <div class="col-md-2 cut-type-box" ng-click="viewCut('angle')">
+        <div class="col-sm-2 cut-type-box" ng-click="viewCut('angle')">
             <img src="/img/cuts/angle.png" alt="roundbar" /><br/>
             Angle
         </div>
-        <div class="col-md-2 cut-type-box" ng-click="viewCut('pipe')">
+        <div class="col-sm-2 cut-type-box" ng-click="viewCut('pipe')">
             <img src="/img/cuts/pipe.png" alt="roundbar" /><br/>
             Pipe
         </div>
-        <div class="col-md-2 cut-type-box" ng-click="viewCut('hexagon')">
+        <div class="col-sm-2 cut-type-box" ng-click="viewCut('hexagon')">
             <img src="/img/cuts/hexagon.png" alt="roundbar" /><br/>
             Hexagon
         </div>
-        <div class="col-md-2 cut-type-box" ng-click="viewCut('sheet')">
+        <div class="col-sm-2 cut-type-box" ng-click="viewCut('sheet')">
             <img src="/img/cuts/sheet.png" alt="roundbar" /><br/>
             Sheet
         </div>
-        <div class="col-md-2 cut-type-box" ng-click="viewCut('squarebar')">
+        <div class="col-sm-2 cut-type-box" ng-click="viewCut('squarebar')">
             <img src="/img/cuts/squarebar.png" alt="roundbar" /><br/>
             Square Bar
         </div>
-        <div class="col-md-2 cut-type-box" ng-click="viewCut('flatbar')">
+        <div class="col-sm-2 cut-type-box" ng-click="viewCut('flatbar')">
             <img src="/img/cuts/flatbar.png" alt="roundbar" /><br/>
             Flat Bar
         </div>

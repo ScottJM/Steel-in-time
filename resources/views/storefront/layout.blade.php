@@ -89,7 +89,7 @@
 			</div>
 		</div>
 	</nav>
-
+    <div class="alert alert-success" ng-show="alert != null" >@{{ alert.text }} <a href="" ng-click="alert.action()" class="alert-link" ng-show="alert.action">[@{{ alert.actionLabel }}]</a></div>
 
 
         @yield('content')
