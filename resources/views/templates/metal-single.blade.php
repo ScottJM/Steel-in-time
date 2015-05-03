@@ -1,27 +1,22 @@
 <div class="row">
     <h1>@{{ metal.name }}</h1>
     <div ng-show="metal.name == 'Aluminium'">
-       <div class="col-md-2">
-           <h4>Aluminium 6082 (HE30)</h4>
 
-        <p>Aluminium alloy 6082 is a medium strength alloy with a great corrosion resistance. It has the highest strength of the 6000 series alloys. It is typically known a structural alloy due to its properties. </p>
+           <h3><strong>Aluminium 6082 (HE30)</strong></h3>
 
+            <p>Aluminium alloy 6082 is a medium strength alloy with a great corrosion resistance. It has the highest strength of the 6000 series alloys. It is typically known a structural alloy due to its properties. </p>
+        <div class="col-md-1">
             <h4>Applications of 6082</h4>
-                <ol>Cranes</ol>
+                <ul>
+                <li>Cranes</li>
                 <li>Bridges</li>
                 <li>Transport Applications</li>
                 <li>Highly Stressed Applications</li>
                 <li>Beers Barrels</li>
                 <li>Milk Churns</li>
-        </div>
+                </ul>
 
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h3><u>Generic Physical Properties</u></h3>
+        <h3>Generic Physical Properties</h3>
 
         Property			Value
         Density			2.70 g/cm³
@@ -31,7 +26,7 @@
         Thermal Conductivity		180 W/m.K
         Electrical Resistivity		0.038 x10-6 ? .m
 
-        <h3><u>Chemical Composition</u></h3>
+        <h3>Chemical Composition</h3>
         <table id="chemicalComp">
             <tbody>
                 <tr>
@@ -39,47 +34,47 @@
                     <th style ="text-align: right;">Weight %</th>
                 </tr>
                 <tr>
-                    <td>Aluminium (AL)</td>
+                    <td style="width: 50%;">Aluminium (AL)</td>
                     <td>Balanced</td>
                 </tr>
                 <tr>
-                    <td>Silicon (Si)</td>
+                    <td style="width: 50%;">Silicon (Si)</td>
                     <td>0.70-1.30</td>
                 </tr>
                 <tr>
-                    <td>Iron (Fe)</td>
+                    <td style="width: 50%;">Iron (Fe)</td>
                     <td>0.50 max</td>
                 </tr>
                 <tr>
-                    <td>Copper (Cu)</td>
+                    <td style="width: 50%;">Copper (Cu)</td>
                     <td>0.10 max</td>
                 </tr>
                 <tr>
-                    <td>Manganese (Mn)</td>
+                    <td style="width: 50%;">Manganese (Mn)</td>
                     <td>0.40-1.00</td>
                 </tr>
                 <tr>
-                    <td>Chromium (Cr)</td>
+                    <td style="width: 50%;">Chromium (Cr)</td>
                     <td>0.25 max</td>
                 </tr>
                 <tr>
-                    <td>Magnesium (Mg)</td>
+                    <td style="width: 50%;">Magnesium (Mg)</td>
                     <td>0.06-1.20</td>
                 </tr>
                 <tr>
-                    <td>Zinc (Zn)</td>
+                    <td style="width: 50%;">Zinc (Zn)</td>
                     <td>0.20 max</td>
                 </tr>
                 <tr>
-                    <td> Titanium (Ti)</td>
+                    <td style="width: 50%;"> Titanium (Ti)</td>
                     <td>0.10 max</td>
                 </tr>
                 <tr>
-                    <td>Others Each</td>
+                    <td style="width: 50%;">Others Each</td>
                     <td>0.05 max</td>
                 </tr>
                 <tr>
-                    <td>Others Total</td>
+                    <td style="width: 50%;">Others Total</td>
                     <td>0.15 max</td>
                 </tr>
            </tbody>
@@ -87,7 +82,7 @@
 
 
         <br>
-        <u>Weldability</u>
+        <h3>Weldability<h3>
         <br>
         6082 has a generally good weldability however its strength is lowered on the welding point/zone.
         <br>
@@ -100,7 +95,7 @@
        <strong>Brazability: </strong>Good
         <br>
        <strong>Solderability: </strong>Good
-
+    </div>
     </div>
 
     <div ng-show="metal.name == 'Stainless Steel'">
