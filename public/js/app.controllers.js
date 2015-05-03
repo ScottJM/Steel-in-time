@@ -167,9 +167,8 @@ App.
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dapibus arcu, sed finibus quam cursus at.'
             },
             {
-                image: '/img/default.png',
-                title: 'Stainless Steel Flatbar',
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dapibus arcu, sed finibus quam cursus at.'
+                title: 'Welcome to Steel in Time!',
+                text: "This is our brand new website and we're here to help supply you with all your metal needs. We stock a HUGE range of products, so use the drop down search below to get started!"
             }
         ];
 
