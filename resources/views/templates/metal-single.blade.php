@@ -6,7 +6,7 @@
 
             <p>Aluminium alloy 6082 is a medium strength alloy with a great corrosion resistance. It has the highest strength of the 6000 series alloys. It is typically known a structural alloy due to its properties. </p>
         <div class="col-md-7">
-            <h4>Applications of 6082</h4>
+            <h4><strong>ons of 6082</strong></h4>
                 <ul>
                 <li>Cranes</li>
                 <li>Bridges</li>
@@ -16,7 +16,7 @@
                 <li>Milk Churns</li>
                 </ul>
 
-        <h4>Generic Physical Properties</h4>
+        <h4><strong>Generic Physical Properties</strong></h4>
 
         Property			Value
         Density			2.70 g/cm^3
@@ -26,12 +26,12 @@
         Thermal Conductivity		180 W/m.K
         Electrical Resistivity		0.038 x10-6 ? .m
 
-        <h4>Chemical Composition</h4>
-        <table id="chemicalComp" style="border-spacing: 2px;border-color: #2C3E50;border-bottom-color: #2C3E50;border-left-color: #2C3E50;border-right-color: #2C3E50;border-top-color: #2C3E50;">
-            <tbody style="display: table-row-group; vertical-align: middle;border-color: inherit;">
+        <h4><strong>Composition</strong></h4>
+        <table class="table table-bordered">
+            <tbody>
                 <tr>
-                    <th style="width: 50%;text-align: left;background-color: #1F3252; color: #FFFFFF">Chemical Element</th>
-                    <th style ="text-align: right;background-color: #1F3252; color: #FFFFFF">Weight %</th>
+                    <th>Chemical Element</th>
+                    <th>Weight %</th>
                 </tr>
                 <tr>
                     <td style="width: 50%;">Aluminium (AL)</td>
@@ -82,7 +82,7 @@
 
 
         <br>
-        <h4>Weldability</h4>
+        <h4><strong>Weldability</strong></h4>
         6082 has a generally good weldability however its strength is lowered on the welding point/zone.
         <br>
        <strong>Weldability – Gas: </strong> Good
