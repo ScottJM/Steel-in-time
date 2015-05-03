@@ -15,7 +15,8 @@
                     <li>Beers Barrels</li>
                     <li>Milk Churns</li>
                 </ul>
-
+        </div>
+        <div class="col-md-9">
         <h4><strong>Generic Physical Properties</strong></h4>
             <table class="table table-bordered">
                 <tbody>
@@ -50,6 +51,8 @@
 
                 </tbody>
             </table>
+        </div>
+        <div class="col-md-7">
         <h4><strong>Composition</strong></h4>
         <table class="table table-bordered">
             <tbody>
