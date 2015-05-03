@@ -106,7 +106,7 @@
                 </tr>
            </tbody>
        </table>
-
+        </div>
 
         <br>
         <h4><strong>Weldability</strong></h4>
@@ -121,7 +121,7 @@
        <strong>Brazability: </strong>Good
         <br>
        <strong>Solderability: </strong>Good
-    </div>
+
     </div>
 
     <div ng-show="metal.name == 'Stainless Steel'">
