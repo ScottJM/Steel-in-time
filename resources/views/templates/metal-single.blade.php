@@ -110,7 +110,7 @@
         </div>
 
         <br>
-
+        <div class="col-md-10">
         <h4><strong>Weldability</strong></h4>
         6082 has a generally good weldability however its strength is lowered on the welding point/zone.
         <br>
@@ -123,6 +123,7 @@
        <strong>Brazability: </strong>Good
         <br>
        <strong>Solderability: </strong>Good
+       </div>
 
     </div>
 
