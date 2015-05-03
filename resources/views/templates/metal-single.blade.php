@@ -5,7 +5,7 @@
            <h3><strong>Aluminium 6082 (HE30)</strong></h3>
 
             <p>Aluminium alloy 6082 is a medium strength alloy with a great corrosion resistance. It has the highest strength of the 6000 series alloys. It is typically known a structural alloy due to its properties. </p>
-        <div class="col-md-7">
+        <div class="col-md-5">
             <h4><strong>Applications of 6082</strong></h4>
                 <ul>
                     <li>Cranes</li>
@@ -16,8 +16,8 @@
                     <li>Milk Churns</li>
                 </ul>
         </div>
-        
-        <div class="col-md-9">
+
+        <div class="col-md-5">
         <h4><strong>Generic Physical Properties</strong></h4>
             <table class="table table-bordered">
                 <tbody>
@@ -53,62 +53,64 @@
                 </tbody>
             </table>
         </div>
-
-        <h4><strong>Composition</strong></h4>
-        <table class="table table-bordered">
-            <tbody>
-                <tr>
-                    <th>Chemical Element</th>
-                    <th>Weight %</th>
-                </tr>
-                <tr>
-                    <td>Aluminium (AL)</td>
-                    <td>Balanced</td>
-                </tr>
-                <tr>
-                    <td>Silicon (Si)</td>
-                    <td>0.70-1.30</td>
-                </tr>
-                <tr>
-                    <td>Iron (Fe)</td>
-                    <td>0.50 max</td>
-                </tr>
-                <tr>
-                    <td>Copper (Cu)</td>
-                    <td>0.10 max</td>
-                </tr>
-                <tr>
-                    <td>Manganese (Mn)</td>
-                    <td>0.40-1.00</td>
-                </tr>
-                <tr>
-                    <td>Chromium (Cr)</td>
-                    <td>0.25 max</td>
-                </tr>
-                <tr>
-                    <td>Magnesium (Mg)</td>
-                    <td>0.06-1.20</td>
-                </tr>
-                <tr>
-                    <td>Zinc (Zn)</td>
-                    <td>0.20 max</td>
-                </tr>
-                <tr>
-                    <td> Titanium (Ti)</td>
-                    <td>0.10 max</td>
-                </tr>
-                <tr>
-                    <td>Others Each</td>
-                    <td>0.05 max</td>
-                </tr>
-                <tr>
-                    <td>Others Total</td>
-                    <td>0.15 max</td>
-                </tr>
-           </tbody>
-       </table>
+        <div class="col-md-5">
+            <h4><strong>Composition</strong></h4>
+                 <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <th>Chemical Element</th>
+                            <th>Weight %</th>
+                        </tr>
+                        <tr>
+                            <td>Aluminium (AL)</td>
+                            <td>Balanced</td>
+                        </tr>
+                        <tr>
+                            <td>Silicon (Si)</td>
+                            <td>0.70-1.30</td>
+                        </tr>
+                        <tr>
+                            <td>Iron (Fe)</td>
+                            <td>0.50 max</td>
+                        </tr>
+                        <tr>
+                            <td>Copper (Cu)</td>
+                            <td>0.10 max</td>
+                        </tr>
+                        <tr>
+                            <td>Manganese (Mn)</td>
+                            <td>0.40-1.00</td>
+                        </tr>
+                        <tr>
+                            <td>Chromium (Cr)</td>
+                            <td>0.25 max</td>
+                        </tr>
+                        <tr>
+                            <td>Magnesium (Mg)</td>
+                            <td>0.06-1.20</td>
+                        </tr>
+                        <tr>
+                            <td>Zinc (Zn)</td>
+                            <td>0.20 max</td>
+                        </tr>
+                        <tr>
+                            <td> Titanium (Ti)</td>
+                            <td>0.10 max</td>
+                        </tr>
+                        <tr>
+                            <td>Others Each</td>
+                            <td>0.05 max</td>
+                        </tr>
+                        <tr>
+                            <td>Others Total</td>
+                            <td>0.15 max</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
 
         <br>
+        
         <h4><strong>Weldability</strong></h4>
         6082 has a generally good weldability however its strength is lowered on the welding point/zone.
         <br>
