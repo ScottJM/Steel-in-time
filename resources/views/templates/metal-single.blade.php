@@ -1,6 +1,5 @@
 <div class="row">
     <h1>@{{ metal.name }}</h1>
-
     <div ng-show="metal.name == 'Aluminium'">
         Aluminium 6082 (HE30)
 
@@ -14,7 +13,7 @@
         Beer barrels
         Milk churns
 
-        Generic Physical Properties
+        <h3><u>Generic Physical Properties</u></h3>
 
         Property			Value
         Density			2.70 g/cm³
@@ -24,59 +23,62 @@
         Thermal Conductivity		180 W/m.K
         Electrical Resistivity		0.038 x10-6 ? .m
 
-        Chemical Composition
-       <table id="chemicalComp">
-           <tr>
-               <td>Chemical Element</td>
-               <td>Weight %</td>
-           </tr>
-           <tr>
-               <td>Aluminium (AL)</td>
-               <td>Balanced</td>
-           </tr>
-           <tr>
-               <td>Silicon (Si)</td>
-               <td>0.70-1.30</td>
-           </tr>
-           <tr>
-               <td>Iron (Fe)</td>
-               <td>0.50 max</td>
-           </tr>
-           <tr>
-               <td>Copper (Cu)</td>
-               <td>0.10 max</td>
-           </tr>
-           <tr>
-               <td>Manganese (Mn)</td>
-               <td>0.40-1.00</td>
-           </tr>
-           <tr>
-               <td>Chromium (Cr)</td>
-               <td>0.25 max</td>
-           </tr>
-           <tr>
-               <td>Magnesium (Mg)</td>
-               <td>0.06-1.20</td>
-           </tr>
-           <tr>
-               <td>Zinc (Zn)</td>
-               <td>0.20 max</td>
-           </tr>
-           <tr>
-               <td> Titanium (Ti)</td>
-               <td>0.10 max</td>
-           </tr>
-           <tr>
-               <td>Others Each</td>
-               <td>0.05 max</td>
-           </tr>
-           <tr>
-               <td>Others Total</td>
-               <td>0.15 max</td>
-           </tr>
+        <h3><u>Chemical Composition</u></h3>
+        <table id="chemicalComp">
+            <tbody>
+                <tr>
+                    <th style="width: 50%;text-align: left;">Chemical Element</th>
+                    <th style ="text-align: right;">Weight %</th>
+                </tr>
+                <tr>
+                    <td>Aluminium (AL)</td>
+                    <td>Balanced</td>
+                </tr>
+                <tr>
+                    <td>Silicon (Si)</td>
+                    <td>0.70-1.30</td>
+                </tr>
+                <tr>
+                    <td>Iron (Fe)</td>
+                    <td>0.50 max</td>
+                </tr>
+                <tr>
+                    <td>Copper (Cu)</td>
+                    <td>0.10 max</td>
+                </tr>
+                <tr>
+                    <td>Manganese (Mn)</td>
+                    <td>0.40-1.00</td>
+                </tr>
+                <tr>
+                    <td>Chromium (Cr)</td>
+                    <td>0.25 max</td>
+                </tr>
+                <tr>
+                    <td>Magnesium (Mg)</td>
+                    <td>0.06-1.20</td>
+                </tr>
+                <tr>
+                    <td>Zinc (Zn)</td>
+                    <td>0.20 max</td>
+                </tr>
+                <tr>
+                    <td> Titanium (Ti)</td>
+                    <td>0.10 max</td>
+                </tr>
+                <tr>
+                    <td>Others Each</td>
+                    <td>0.05 max</td>
+                </tr>
+                <tr>
+                    <td>Others Total</td>
+                    <td>0.15 max</td>
+                </tr>
+           </tbody>
        </table>
 
 
+        <br>
         <u>Weldability</u>
         <br>
         6082 has a generally good weldability however its strength is lowered on the welding point/zone.
