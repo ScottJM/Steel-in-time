@@ -6,26 +6,50 @@
 
             <p>Aluminium alloy 6082 is a medium strength alloy with a great corrosion resistance. It has the highest strength of the 6000 series alloys. It is typically known a structural alloy due to its properties. </p>
         <div class="col-md-7">
-            <h4><strong>ons of 6082</strong></h4>
+            <h4><strong>Applications of 6082</strong></h4>
                 <ul>
-                <li>Cranes</li>
-                <li>Bridges</li>
-                <li>Transport Applications</li>
-                <li>Highly Stressed Applications</li>
-                <li>Beers Barrels</li>
-                <li>Milk Churns</li>
+                    <li>Cranes</li>
+                    <li>Bridges</li>
+                    <li>Transport Applications</li>
+                    <li>Highly Stressed Applications</li>
+                    <li>Beers Barrels</li>
+                    <li>Milk Churns</li>
                 </ul>
 
         <h4><strong>Generic Physical Properties</strong></h4>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <th>Property</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <tr>Density</tr>
+                        <tr>2.70 g/cm^3</tr>
+                    </tr>
+                    <tr>
+                        <tr>Melting Point</tr>
+                        <tr>555 C</tr>
+                    </tr>
+                <tr>
+                        <tr>Thermal Expansion</tr>
+                        <tr>24 x10^6 /k</tr>
+                    </tr>
+                <tr>
+                        <tr>Modulus of Elasticity</tr>
+                        <tr>70 GPa</tr>
+                    </tr>
+                <tr>
+                        <tr>Thermal Conductivity</tr>
+                        <tr>180 W/m.K</tr>
+                    </tr>
+                <tr>
+                        <tr>Electrical Resistivity</tr>
+                        <tr>0.038 x10^6 Ohm .m</tr>
+                    </tr>
 
-        Property			Value
-        Density			2.70 g/cm^3
-        Melting Point			555 C
-        Thermal Expansion		24 x10-6 /K
-        Modulus of Elasticity		70 GPa
-        Thermal Conductivity		180 W/m.K
-        Electrical Resistivity		0.038 x10-6 ? .m
-
+                </tbody>
+            </table>
         <h4><strong>Composition</strong></h4>
         <table class="table table-bordered">
             <tbody>
