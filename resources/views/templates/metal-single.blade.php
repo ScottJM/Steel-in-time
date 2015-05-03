@@ -5,7 +5,7 @@
            <h3><strong>Aluminium 6082 (HE30)</strong></h3>
 
             <p>Aluminium alloy 6082 is a medium strength alloy with a great corrosion resistance. It has the highest strength of the 6000 series alloys. It is typically known a structural alloy due to its properties. </p>
-        <div class="col-md-5">
+        <div class="col-md-10">
             <h4><strong>Applications of 6082</strong></h4>
                 <ul>
                     <li>Cranes</li>
@@ -17,7 +17,7 @@
                 </ul>
         </div>
 
-        <div class="col-md-5">
+        <div class="col-md-10">
         <h4><strong>Generic Physical Properties</strong></h4>
             <table class="table table-bordered">
                 <tbody>
@@ -53,7 +53,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-10">
             <h4><strong>Composition</strong></h4>
                  <table class="table table-bordered">
                     <tbody>
@@ -110,7 +110,7 @@
         </div>
 
         <br>
-        
+
         <h4><strong>Weldability</strong></h4>
         6082 has a generally good weldability however its strength is lowered on the welding point/zone.
         <br>
