@@ -34,47 +34,47 @@
                     <th>Weight %</th>
                 </tr>
                 <tr>
-                    <td style="width: 50%;">Aluminium (AL)</td>
+                    <td>Aluminium (AL)</td>
                     <td>Balanced</td>
                 </tr>
                 <tr>
-                    <td style="width: 50%;">Silicon (Si)</td>
+                    <td>Silicon (Si)</td>
                     <td>0.70-1.30</td>
                 </tr>
                 <tr>
-                    <td style="width: 50%;">Iron (Fe)</td>
+                    <td>Iron (Fe)</td>
                     <td>0.50 max</td>
                 </tr>
                 <tr>
-                    <td style="width: 50%;">Copper (Cu)</td>
+                    <td>Copper (Cu)</td>
                     <td>0.10 max</td>
                 </tr>
                 <tr>
-                    <td style="width: 50%;">Manganese (Mn)</td>
+                    <td>Manganese (Mn)</td>
                     <td>0.40-1.00</td>
                 </tr>
                 <tr>
-                    <td style="width: 50%;">Chromium (Cr)</td>
+                    <td>Chromium (Cr)</td>
                     <td>0.25 max</td>
                 </tr>
                 <tr>
-                    <td style="width: 50%;">Magnesium (Mg)</td>
+                    <td>Magnesium (Mg)</td>
                     <td>0.06-1.20</td>
                 </tr>
                 <tr>
-                    <td style="width: 50%;">Zinc (Zn)</td>
+                    <td>Zinc (Zn)</td>
                     <td>0.20 max</td>
                 </tr>
                 <tr>
-                    <td style="width: 50%;"> Titanium (Ti)</td>
+                    <td> Titanium (Ti)</td>
                     <td>0.10 max</td>
                 </tr>
                 <tr>
-                    <td style="width: 50%;">Others Each</td>
+                    <td>Others Each</td>
                     <td>0.05 max</td>
                 </tr>
                 <tr>
-                    <td style="width: 50%;">Others Total</td>
+                    <td>Others Total</td>
                     <td>0.15 max</td>
                 </tr>
            </tbody>
