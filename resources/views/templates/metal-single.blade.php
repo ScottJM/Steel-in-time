@@ -25,28 +25,71 @@
         Electrical Resistivity		0.038 x10-6 ? .m
 
         Chemical Composition
-        Weight %
-        Aluminium (AI) -		Bal
-        Silicon (Si) -			0.70-1.3
-        Iron (Fe) - 			0.50 max
-        Copper (Cu) - 		0.10 max
-        Manganese (Mn) - 		0.40-1.00
-        Chromium (Cr) - 		0.25 max
-        Magnesium (Mg) - 		0.06-1.20
-        Zinc (Zn) - 			0.20 max
-        Titanium (Ti) - 		0.10 max
-        Others Each 			0.05 max
-        Others Total - 		0.15 max
+       <table id="chemicalComp">
+           <tr>
+               <td>Chemical Element</td>
+               <td>Weight %</td>
+           </tr>
+           <tr>
+               <td>Aluminium (AL)</td>
+               <td>Balanced</td>
+           </tr>
+           <tr>
+               <td>Silicon (Si)</td>
+               <td>0.70-1.30</td>
+           </tr>
+           <tr>
+               <td>Iron (Fe)</td>
+               <td>0.50 max</td>
+           </tr>
+           <tr>
+               <td>Copper (Cu)</td>
+               <td>0.10 max</td>
+           </tr>
+           <tr>
+               <td>Manganese (Mn)</td>
+               <td>0.40-1.00</td>
+           </tr>
+           <tr>
+               <td>Chromium (Cr)</td>
+               <td>0.25 max</td>
+           </tr>
+           <tr>
+               <td>Magnesium (Mg)</td>
+               <td>0.06-1.20</td>
+           </tr>
+           <tr>
+               <td>Zinc (Zn)</td>
+               <td>0.20 max</td>
+           </tr>
+           <tr>
+               <td> Titanium (Ti)</td>
+               <td>0.10 max</td>
+           </tr>
+           <tr>
+               <td>Others Each</td>
+               <td>0.05 max</td>
+           </tr>
+           <tr>
+               <td>Others Total</td>
+               <td>0.15 max</td>
+           </tr>
+       </table>
 
 
-        Weldability
+        <u>Weldability</u>
+        <br>
         6082 has a generally good weldability however its strength is lowered on the welding point/zone.
-
-        Weldability – Gas: Good
-        Weldability – Arc: Good
-        Weldability – Resistance: Good
-        Brazability: Good
-        Solderability: Good
+        <br>
+       <strong>Weldability – Gas: </strong> Good
+        <br>
+       <strong>Weldability – Arc: </strong> Good
+        <br>
+       <strong>Weldability - Resistance: </strong>Good
+        <br>
+       <strong>Brazability: </strong>Good
+        <br>
+       <strong>Solderability: </strong>Good
 
     </div>
 
