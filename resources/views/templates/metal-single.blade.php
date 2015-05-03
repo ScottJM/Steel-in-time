@@ -16,6 +16,7 @@
                     <li>Milk Churns</li>
                 </ul>
         </div>
+        
         <div class="col-md-9">
         <h4><strong>Generic Physical Properties</strong></h4>
             <table class="table table-bordered">
@@ -52,7 +53,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="col-md-9">
+
         <h4><strong>Composition</strong></h4>
         <table class="table table-bordered">
             <tbody>
@@ -106,7 +107,6 @@
                 </tr>
            </tbody>
        </table>
-        </div>
 
         <br>
         <h4><strong>Weldability</strong></h4>
