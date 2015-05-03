@@ -24,28 +24,28 @@
                         <th>Value</th>
                     </tr>
                     <tr>
-                        <tr>Density</tr>
-                        <tr>2.70 g/cm^3</tr>
+                        <td>Density</td>
+                        <td>2.70 g/cm^3</td>
                     </tr>
                     <tr>
-                        <tr>Melting Point</tr>
-                        <tr>555 C</tr>
+                        <td>Melting Point</td>
+                        <td>555 C</td>
                     </tr>
-                <tr>
-                        <tr>Thermal Expansion</tr>
-                        <tr>24 x10^6 /k</tr>
+                    <tr>
+                        <td>Thermal Expansion</td>
+                        <td>24 x10^6 /k</td>
                     </tr>
-                <tr>
-                        <tr>Modulus of Elasticity</tr>
-                        <tr>70 GPa</tr>
+                    <tr>
+                        <td>Modulus of Elasticity</td>
+                        <td>70 GPa</td>
                     </tr>
-                <tr>
-                        <tr>Thermal Conductivity</tr>
-                        <tr>180 W/m.K</tr>
+                    <tr>
+                        <td>Thermal Conductivity</td>
+                        <td>180 W/m.K</td>
                     </tr>
-                <tr>
-                        <tr>Electrical Resistivity</tr>
-                        <tr>0.038 x10^6 Ohm .m</tr>
+                    <tr>
+                        <td>Electrical Resistivity</td>
+                        <td>0.038 x10^6 Ohm .m</td>
                     </tr>
 
                 </tbody>
