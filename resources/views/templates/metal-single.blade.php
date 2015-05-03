@@ -1,18 +1,26 @@
 <div class="row">
     <h1>@{{ metal.name }}</h1>
     <div ng-show="metal.name == 'Aluminium'">
-        Aluminium 6082 (HE30)
+       <div class="col-md-2">
+           <h4>Aluminium 6082 (HE30)</h4>
 
-        Aluminium alloy 6082 is a medium strength alloy with a great corrosion resistance. It has the highest strength of the 6000 series alloys. It is typically known a structural alloy due to its properties.
+        <p>Aluminium alloy 6082 is a medium strength alloy with a great corrosion resistance. It has the highest strength of the 6000 series alloys. It is typically known a structural alloy due to its properties. </p>
 
-        Applications of 6082
-        Cranes
-        Bridges
-        Transport applications
-        Highly stressed applications
-        Beer barrels
-        Milk churns
+            <h4>Applications of 6082</h4>
+                <ol>Cranes</ol>
+                <li>Bridges</li>
+                <li>Transport Applications</li>
+                <li>Highly Stressed Applications</li>
+                <li>Beers Barrels</li>
+                <li>Milk Churns</li>
+        </div>
 
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <h3><u>Generic Physical Properties</u></h3>
 
         Property			Value

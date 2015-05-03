@@ -53,7 +53,6 @@
                 <li><a href="#"><i class="fa fa-envelope"></i></a></li>
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                 <li style="margin-top:20px"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li style="margin-top:20px"><a href="#"><i class="fa fa-google-plus"></i></a></li>
             </ul>
         </div>
     </div>
