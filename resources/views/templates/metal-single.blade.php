@@ -5,7 +5,7 @@
            <h3><strong>Aluminium 6082 (HE30)</strong></h3>
 
             <p>Aluminium alloy 6082 is a medium strength alloy with a great corrosion resistance. It has the highest strength of the 6000 series alloys. It is typically known a structural alloy due to its properties. </p>
-        <div class="col-md-1">
+        <div class="col-md-7">
             <h4>Applications of 6082</h4>
                 <ul>
                 <li>Cranes</li>
@@ -19,19 +19,19 @@
         <h3>Generic Physical Properties</h3>
 
         Property			Value
-        Density			2.70 g/cm³
-        Melting Point			555 °C
+        Density			2.70 g/cm^3
+        Melting Point			555 C
         Thermal Expansion		24 x10-6 /K
         Modulus of Elasticity		70 GPa
         Thermal Conductivity		180 W/m.K
         Electrical Resistivity		0.038 x10-6 ? .m
 
         <h3>Chemical Composition</h3>
-        <table id="chemicalComp">
+        <table id="chemicalComp" style="border: 1px;border-color: #2C3E50;">
             <tbody>
                 <tr>
-                    <th style="width: 50%;text-align: left;">Chemical Element</th>
-                    <th style ="text-align: right;">Weight %</th>
+                    <th style="width: 50%;text-align: left;background-color: #2C3E50; color: #FFFFFF">Chemical Element</th>
+                    <th style ="text-align: right;background-color: #2C3E50; color: #FFFFFF">Weight %</th>
                 </tr>
                 <tr>
                     <td style="width: 50%;">Aluminium (AL)</td>
@@ -82,7 +82,7 @@
 
 
         <br>
-        <h3>Weldability<h3>
+        <h3>Weldability</h3>
         <br>
         6082 has a generally good weldability however its strength is lowered on the welding point/zone.
         <br>
