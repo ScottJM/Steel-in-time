@@ -52,7 +52,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="col-md-9">
+        <div class="col-md-6">
         <h4><strong>Composition</strong></h4>
         <table class="table table-bordered">
             <tbody>
