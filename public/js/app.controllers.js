@@ -158,18 +158,23 @@ App.
     })
     .controller('HomeCtrl', function($scope, $modal, $log, Product, $location) {
 
-        $scope.myInterval = 5000;
+        $scope.myInterval = 10000;
 
         $scope.slides = [
             {
-                image: '/img/default.png',
-                title: 'Stainless Steel Flatbar',
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque dapibus arcu, sed finibus quam cursus at.'
+                title: 'Welcome to Steel in Time!',
+                text: "This is our brand new website and we're here to help supply you with all your metal needs. We stock a HUGE range of products, so use the drop down search below to get started!",
+                button: 'Contact us',
+                buttonlink: '/store/#/contact'
             },
             {
-                title: 'Welcome to Steel in Time!',
-                text: "This is our brand new website and we're here to help supply you with all your metal needs. We stock a HUGE range of products, so use the drop down search below to get started!"
+                image: '/img/default.png',
+                title: 'Stainless Steel Flat bar',
+                text: 'We have just opened a brand new range of Stainless Steel products. To see products such as Stainless Steel Flat Bar click the button below.',
+                button: 'View Product',
+                buttonlink: '/store/#/about'
             }
+
         ];
 
 

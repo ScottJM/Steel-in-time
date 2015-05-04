@@ -32,8 +32,6 @@
             <div ng-show="messageSent">
                 <h3 class="text-success"><i class="glyphicon glyphicon-ok"></i> Thank you for your message!</h3>
             </div>
-
-
         </div>
         <div class="col-md-3" id="sidebar">
             <h4>Email</h4>
@@ -49,10 +47,10 @@
 
                 <p>Company No. 123456798</p>
             <h4>Connect with us</h4>
-            <ul id="social-links">
-                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li style="margin-top:20px"><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <ul id="social-links" style="float: left;">
+                <li><a href="https://www.facebook.com/steelintimeUK"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/steel_in_time"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
             </ul>
         </div>
     </div>

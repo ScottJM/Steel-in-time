@@ -62,7 +62,6 @@
 				<ul class="nav navbar-nav pjax" id="main-nav">
 					<li><a href="{{ url('/store/') }}"><span>Home</span></a></li>
 					<li><a href="{{ url('/store/#about') }}"><span>About</span></a></li>
-					<li><a href="{{ url('/store/#products') }}"><span>Products</span></a></li>
 					<li><a href="{{ url('/store/#contact') }}"><span>Contact</span></a></li>
 
 
