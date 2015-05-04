@@ -15,15 +15,13 @@
                     <li>Beers Barrels</li>
                     <li>Milk Churns</li>
                 </ul>
-        </div>
 
-        <div class="col-md-10">
         <h4><strong>Generic Physical Properties</strong></h4>
             <table class="table table-bordered">
                 <tbody>
                     <tr>
-                        <th>Property</th>
-                        <th>Value</th>
+                        <th style="width: 50%;">Property</th>
+                        <th style="width: 50%;">Value</th>
                     </tr>
                     <tr>
                         <td>Density</td>
@@ -49,17 +47,15 @@
                         <td>Electrical Resistivity</td>
                         <td>0.038 x10^6 Ohm .m</td>
                     </tr>
-
                 </tbody>
             </table>
-        </div>
-        <div class="col-md-10">
+
             <h4><strong>Composition</strong></h4>
                  <table class="table table-bordered">
                     <tbody>
                         <tr>
-                            <th>Chemical Element</th>
-                            <th>Weight %</th>
+                            <th style="width: 50%;">Chemical Element</th>
+                            <th style="width: 50%;">Weight %</th>
                         </tr>
                         <tr>
                             <td>Aluminium (AL)</td>
@@ -107,156 +103,318 @@
                         </tr>
                     </tbody>
                 </table>
-        </div>
 
-        <br>
-        <div class="col-md-10">
         <h4><strong>Weldability</strong></h4>
-        6082 has a generally good weldability however its strength is lowered on the welding point/zone.
+        <p> Aluminium 6082 has a generally good weldability however its strength is lowered on the welding point/zone.</p>
         <br>
-       <strong>Weldability – Gas: </strong> Good
-        <br>
-       <strong>Weldability – Arc: </strong> Good
-        <br>
-       <strong>Weldability - Resistance: </strong>Good
-        <br>
-       <strong>Brazability: </strong>Good
-        <br>
-       <strong>Solderability: </strong>Good
+            <ul>
+                <li style="list-style-type: none;"><strong>Weldability (Gas): </strong> Good</li>
+                <li style="list-style-type: none;"><strong>Weldability (Arc): </strong> Good</li>
+                <li style="list-style-type: none;"><strong>Weldability (Resistance): </strong>Good</li>
+                <li style="list-style-type: none;"><strong>Brazability: </strong>Good</li>
+                <li style="list-style-type: none;"><strong>Solderability: </strong>Good</li>
+            </ul>
        </div>
 
     </div>
 
     <div ng-show="metal.name == 'Stainless Steel'">
-        Stainless Steel 303
-        Stainless steel type 1.4305 is popularly known as grade 303 stainless steel. It is the most readily machinable of all the austenitic grades of stainless steel
+        <h3><strong>Stainless Steel 303</strong></h3>
+        <p>Stainless steel type 1.4305 is popularly known as grade 303 stainless steel. It is the most readily machinable of all the austenitic grades of stainless steel</p>
+        <div class="col-md-10">
+            <h4><strong>Key Features</strong></h4>
+                <ul>
+                    <li> Highly Machinable</li>
+                </ul>
+            <h4><strong>Applications of 303</strong></h4>
+                <p>Typically used in heavily machinable parts:</p>
+                    <ul>
+                        <li>Nuts and Bolts</li>
+                        <li>Screws</li>
+                        <li>Gears</li>
+                        <li>Aircraft Fittings</li>
+                        <li>Bushings</li>
+                        <li>Shafts</li>
+                    </ul>
+            <h4><strong>Generic Physical Properties</strong></h4>
+            <table>
+                <tbody>
+                    <tr>
+                        <th style="width: 50%;">Property</th>
+                        <th style="width: 50%;">Value</th>
+                    </tr>
+                    <tr>
+                        <td>Density</td>
+                        <td>8.03 g/cm^3</td>
+                    </tr>
+                    <tr>
+                        <td>Melting Point</td>
+                        <td>1455 C</td>
+                    </tr>
+                    <tr>
+                        <td>Thermal Expansion</td>
+                        <td>17.3 x10^6 /K</td>
+                    </tr>
+                    <tr>
+                        <td>Modulus of Elasticity</td>
+                        <td>193 GPa</td>
+                    </tr>
+                    <tr>
+                        <td>Thermal Conductivity</td>
+                        <td>16.3 W/m.K</td>
+                    </tr>
+                    <tr>
+                        <td>Electrical Resistivity</td>
+                        <td>0.072 x10^6 Ohm .m</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4><strong>Chemical Composition</strong></h4>
+            <table>
+                <tbody>
+                    <tr>
+                        <th style="width: 50%;">Chemical Element</th>
+                        <th style="width: 50%;">Weight %</th>
+                    </tr>
+                    <tr>
+                        <td>Chromium (Cr)</td>
+                        <td>17.00 - 19.00</td>
+                    </tr>
+                    <tr>
+                        <td>Nickel (Ni)</td>
+                        <td>8.00 - 10.00</td>
+                    </tr>
+                    <tr>
+                        <td>Manganese (Mn)</td>
+                        <td>0.0 - 2.00</td>
+                    </tr>
+                    <tr>
+                        <td>Copper (Cu)</td>
+                        <td>0.0 - 1.00</td>
+                    </tr>
+                    <tr>
+                        <td>Silicon (Si)</td>
+                        <td> 0.0 - 1.00</td>
+                    </tr>
+                    <tr>
+                        <td>Sulphur (S)</td>
+                        <td>0.15 - 0.35</td>
+                    </tr>
+                    <tr>
+                        <td>Nitrogen (N)</td>
+                        <td>0.0 - 0.11</td>
+                    </tr>
+                    <tr>
+                        <td>Carbon (C)</td>
+                        <td>0.0 - 0.10</td>
+                    </tr>
+                    <tr>
+                        <td>Phosphorous (P)</td>
+                        <td>0.0 - 0.05</td>
+                    </tr>
+                    <tr>
+                        <td>Iron (Fe)</td>
+                        <td>Balance</td>
+                    </tr>
+                </tbody>
+            </table>
 
-        Key Features
-        Highly machinable
-
-        Applications of 303
-        Typically used in heavily machinable parts:
-
-        Nuts and Bolts
-        Screws
-        Gears
-        Aircraft fittings
-        Bushings
-        Shafts
-        Generic Physical Properties
-
-        Property			Value
-        Density			8.03 g/cm³
-        Melting Point 			1455 °C
-        Thermal Expansion 		17.3 x10-6 /K
-        Modulus of Elasticity 		193 GPa
-        Thermal Conductivity 		16.3 W/m.K
-        Electrical Resistivity 		0.072 x10-6 ? .m
-
-        Chemical Composition
-        Weight %
-        Chromium (Cr) -		17.00 - 19.00
-        Nickel (Ni) - 			8.00 - 10.00
-        Manganese (Mn) - 		0.0 - 2.00
-        Copper (Cu) - 		0.0 - 1.00
-        Silicon (Si) -			0.0 - 1.00
-        Sulphur (S) -			0.15 - 0.35
-        Nitrogen (N) - 		0.0 - 0.11
-        Carbon (C) - 			0.0 - 0.10
-        Phosphorous (P) - 		0.0 - 0.05
-        Iron (Fe) -			Balance
-
-        Weldability
-        The sulphur addition present in 303 stainless steel results in poor weldability. If 303 must be welded the recommended filler rods or electrodes are grades 308L and 309 stainless steels. For maximum corrosion resistance, the welds must be annealed.
-
-        Corrosion Resistance
-        Sulphur additions to the composition act as initiation sites for pitting corrosion. This decreases the corrosion resistance of 303 stainless steel to less than that for 304. However. corrosion resistance remains good in mild environments.
-
-        In chloride containing environments over 60°C, 303 stainless steel is subject to pitting and crevice corrosion. Grade 303 stainless is not suitable for use in marine environments.
-
+            <h4><strong>Weldability</strong></h4>
+                <p>The sulphur addition present in 303 stainless steel results in poor weldability. If 303 must be welded the recommended filler rods or electrodes are grades 308L and 309 stainless steels. For maximum corrosion resistance, the welds must be annealed.</p>
+            <h4><strong>Corrosion Resistance</strong></h4>
+                <p>Sulphur additions to the composition act as initiation sites for pitting corrosion. This decreases the corrosion resistance of 303 stainless steel to less than that for 304. However. corrosion resistance remains good in mild environments.</p>
+                <p>In chloride containing environments over 60°C, 303 stainless steel is subject to pitting and crevice corrosion. Grade 303 stainless is not suitable for use in marine environments.</p>
+        </div>
     </div>
 
     <div ng-show="metal.name == 'Brass'">
-        Brass CZ121
-        Brasses are alloys of Copper and Zinc. They may also contain small amounts of other alloying elements to impart advantageous properties. Brasses have high corrosion resistance and high tensile strength. They are also suited to fabrication by hot forging. Free machining grades of brass set the standard for machining, by which other metals are compared. Brasses are divided into two classes. The alpha alloys, with less than 37% Zinc, and the alpha/beta alloys with 37-45% Zinc. Alpha alloys are ductile and can be cold worked. Alpha/beta or duplex alloys have limited cold ductility and are harder and stronger. CZ121 / CW614N is an alpha/beta alloy. Brass alloy CZ121 / CW614N is used for machining. It has Lead added to the composition to improve machinability. The Lead remains insoluble in the microstructure of the brass and the soft particles act as chip breakers.
+        <h3><strong>Brass CZ121</strong></h3>
+            <p>Brasses are alloys of Copper and Zinc. They may also contain small amounts of other alloying elements to impart advantageous properties. Brasses have high corrosion resistance and high tensile strength. They are also suited to fabrication by hot forging. Free machining grades of brass set the standard for machining, by which other metals are compared. Brasses are divided into two classes. The alpha alloys, with less than 37% Zinc, and the alpha/beta alloys with 37-45% Zinc. Alpha alloys are ductile and can be cold worked. Alpha/beta or duplex alloys have limited cold ductility and are harder and stronger. CZ121 / CW614N is an alpha/beta alloy. Brass alloy CZ121 / CW614N is used for machining. It has Lead added to the composition to improve machinability. The Lead remains insoluble in the microstructure of the brass and the soft particles act as chip breakers.</p>
+        <div class="col-md-10">
+            <h4><strong>Applications of CZ121</strong></h4>
+                <p></p>
+                    <ul>
+                        <li>High speed machined components</li>
+                        <li>Architectural extrusions</li>
+                        <li>Locks</li>
+                        <li>Hinges</li>
+                    </ul>
+            <h4><strong>Generic Physical Properties</strong></h4>
+            <table>
+                <tbody>
+                <tr>
+                    <th style="width: 50%;">Property</th>
+                    <th style="width: 50%;">Value</th>
+                </tr>
+                <tr>
+                    <td>Density</td>
+                    <td>8.47 g/cm^3</td>
+                </tr>
+                <tr>
+                    <td>Melting Point</td>
+                    <td>875 C</td>
+                </tr>
+                <tr>
+                    <td>Thermal Expansion</td>
+                    <td>20.9 x10^6 /K</td>
+                </tr>
+                <tr>
+                    <td>Modulus of Elasticity</td>
+                    <td>97 GPa</td>
+                </tr>
+                <tr>
+                    <td>Thermal Conductivity</td>
+                    <td>123 W/m.K</td>
+                </tr>
+                <tr>
+                    <td>Electrical Resistivity</td>
+                    <td>0.062 x10^6 Ohm .m</td>
+                </tr>
+                </tbody>
+            </table>
+            <h4><strong>Chemical Composition</strong></h4>
+            <table>
+                <tbody>
+                <tr>
+                    <th style="width: 50%;">Chemical Element</th>
+                    <th style="width: 50%;">Weight %</th>
+                </tr>
+                <tr>
+                    <td>Copper (Cu)</td>
+                    <td>57.00 - 59.00</td>
+                </tr>
+                <tr>
+                    <td Lead (Pb)></td>
+                    <td>2.50 - 3.50</td>
+                </tr>
+                <tr>
+                    <td Iron (Fe)></td>
+                    <td>0.0 - 0.30</td>
+                </tr>
+                <tr>
+                    <td Nickel(Ni)></td>
+                    <td>0.0 - 0.30</td>
+                </tr>
+                <tr>
+                    <td>Tin (Sn)</td>
+                    <td>0.0 - 0.30</td>
+                </tr>
+                <tr>
+                    <td>Others (Total)</td>
+                    <td>0.0 - 0.20</td>
+                </tr>
+                <tr>
+                    <td>Aluminium (Al)</td>
+                    <td>0.0 - 0.05</td>
+                </tr>
+                <tr>
+                    <td>Zinc (Zn)</td>
+                    <td>Balance</td>
+                </tr>
 
-        Applications of CZ121
-        High spee machined components
-        Architectural extrusions
-        Locks
-        Hinges
+                </tbody>
+            </table>
 
-        Generic Physical Properties
-
-        Property 			Value
-        Density			 8.47 g/cm³
-        Melting 			Point 875 °C
-        Thermal Expansion 		20.9 x10-6 /K
-        Modulus of Elasticity		97 GPa
-        Thermal Conductivity		123 W/m.K
-        Electrical Resistivity 		0.062 x10-6 ? .m
-        Density 			8.47 g/cm³
-        Melting Point 			875 °C
-        Thermal Expansion 		20.9 x10-6 /K
-        Modulus of Elasticity 97 GPa
-        Thermal Conductivity 123 W/m.K
-        Electrical Resistivity 0.062 x10-6 ? .m
-
-        Chemical Composition
-        Weight %
-        Copper (Cu) - 	57.00 - 59.00
-        Lead (Pb) - 		2.50 - 3.50
-        Iron (Fe) - 		0.0 - 0.30
-        Nickel (Ni) -		 0.0 - 0.30
-        Tin (Sn) - 		0.0 - 0.30
-        Others (Total) - 	0.0 - 0.20
-        Aluminium (Al) - 	0.0 - 0.05
-        Zinc (Zn) - Balance
-
-        Weldability
-        Soldering of CZ121/CW614N is rated as excellent and brazing is good. Butt welding is fair but all other welding methods are not recommended.
-
-        Corrosion Resistance
-        The corrosion resistance of CZ121/CW614N is fair to excellent.
+            <h4><strong>Weldability</strong></h4>
+            <p>Soldering of CZ121/CW614N is rated as excellent and brazing is good. Butt welding is fair but all other welding methods are not recommended.</p>
+            <h4><strong>Corrosion Resistance</strong></h4>
+            <p>The corrosion resistance of CZ121/CW614N is fair to excellent.</p>
+            <ul>
+                <li style="list-style-type: none;"></li>
+                <li style="list-style-type: none;"></li>
+                <li style="list-style-type: none;"></li>
+                <li style="list-style-type: none;"></li>
+                <li style="list-style-type: none;"></li>
+            </ul>
+        </div>
     </div>
     <div ng-show="metal.name == 'Copper'">
-        Copper CZ108
-        Brasses are alloys of Copper and Zinc. They may also contain small amounts of other alloying elements to impart advantageous properties. Brasses have high corrosion resistance and high tensile strength. They are also suited to hot forging. Free machining brass sets the standard for machining, by which other metals are compared. Brasses are divided into two classes. The alpha alloys, with less than 37% zinc, and the alpha/beta alloys with 37-45% zinc. Alpha alloys are ductile and can be cold worked. Alpha/beta or duplex alloys have limited cold ductility and are harder and stronger. CZ108 / CW508L is an alpha alloy. CZ108/CW508L is a high purity cold forming brass. It is used when severe bending properties are required. It can be machined but only with slow speeds and very light feeds.
+        <h3><strong>Copper CZ108</strong></h3>
+            <p>        Brasses are alloys of Copper and Zinc. They may also contain small amounts of other alloying elements to impart advantageous properties. Brasses have high corrosion resistance and high tensile strength. They are also suited to hot forging. Free machining brass sets the standard for machining, by which other metals are compared. Brasses are divided into two classes. The alpha alloys, with less than 37% zinc, and the alpha/beta alloys with 37-45% zinc. Alpha alloys are ductile and can be cold worked. Alpha/beta or duplex alloys have limited cold ductility and are harder and stronger. CZ108 / CW508L is an alpha alloy. CZ108/CW508L is a high purity cold forming brass. It is used when severe bending properties are required. It can be machined but only with slow speeds and very light feeds.</p>
+        <div class="col-md-10">
+            <h4><strong>Applications of CZ121</strong></h4>
+            <ul>
+                <li>Scientific Applications</li>
+                <li>Radiators</li>
+                <li>Heat Exchangers</li>
+                <li>Decorative</li>
+            </ul>
+            <h4><strong>Generic Physical Properties</strong></h4>
+            <table>
+                <tbody>
+                <tr>
+                    <th style="width: 50%;">Property</th>
+                    <th style="width: 50%;">Value</th>
+                </tr>
+                <tr>
+                    <td>Density</td>
+                    <td>8.44 g/cm^3</td>
+                </tr>
+                <tr>
+                    <td>Melting Point</td>
+                    <td>916 C</td>
+                </tr>
+                <tr>
+                    <td>Thermal Expansion</td>
+                    <td>20.5 x10^6 /K</td>
+                </tr>
+                <tr>
+                    <td>Modulus of Elasticity</td>
+                    <td>103.4 GPa</td>
+                </tr>
+                <tr>
+                    <td>Thermal Conductivity</td>
+                    <td>116 W/m.K</td>
+                </tr>
+                </tbody>
+            </table>
+            <h4><strong>Chemical Composition</strong></h4>
+            <table>
+                <tbody>
+                <tr>
+                    <th style="width: 50%;">Chemical Element</th>
+                    <th style="width: 50%;">Weight</th>
+                </tr>
+                <tr>
+                    <td>Copper (Cu)</td>
+                    <td>62.00 - 64.00</td>
+                </tr>
+                <tr>
+                    <td>Nickel (Ni)</td>
+                    <td>0.0 - 0.30</td>
+                </tr>
+                <tr>
+                    <td>Lead (Pb)</td>
+                    <td>0.0 - 0.10</td>
+                </tr>
+                <tr>
+                    <td>Iron (Fe)</td>
+                    <td>0.0 - 0.10</td>
+                </tr>
+                <tr>
+                    <td>Tin (Sn)</td>
+                    <td>0.0 - 0.10</td>
+                </tr>
+                <tr>
+                    <td>Aluminium (Al)</td>
+                    <td>0.0 - 0.05</td>
+                </tr>
+                <tr>
+                    <td>Zinc (Zn)</td>
+                    <td>Balance</td>
+                </tr>
+                <tr>
+                    <td>Others (Total)</td>
+                    <td> 0.0 - 0.20</td>
+                </tr>
+                </tbody>
+            </table>
 
-        Applications of CZ121
-        Scientific Applications
-        Radiators
-        Heat Exchangers
-        Decorative
+            <h4><strong>Weldability</strong></h4>
+            <p>Soldering and brazing of CZ108/CW508L are both rated as “excellent”. Oxyacetylene welding is “good” and gas shielded methods are only “fair”. Resistance flash butt-welding may also be used.</p>
 
-
-
-
-        Generic Physical Properties
-
-        Property 			Value
-        Density			 8.44 g/cm³
-        Melting Point			 916 °C
-        Thermal Expansion		 20.5 x10-6 /K
-        Modulus of Elasticity 		103.4 GPa
-        Thermal Conductivity 		116 W/m.K
-
-        Chemical Composition
-        Weight %
-        Copper (Cu) - 	62.00 - 64.00
-        Nickel (Ni) - 		0.0 - 0.30
-        Lead (Pb) - 		0.0 - 0.10
-        Iron (Fe) -		 0.0 - 0.10
-        Tin (Sn) - 		0.0 - 0.10
-        Aluminium (Al) -	 0.0 - 0.05
-        Zinc (Zn) - 		Balance
-        Others (Total) -	 0.0 - 0.20
-        Weldability
-        Soldering and brazing of CZ108/CW508L are both rated as “excellent”. Oxyacetylene welding is “good” and gas shielded methods are only “fair”. Resistance flash butt-welding may also be used.
-
-        Corrosion Resistance
-        The corrosion resistance of CZ108/CW508L is good to excellent in most environments. It is not suited for use with acetic acid, moist ammonia or ammonia compounds, hydrochloric acid and nitric acid.
-
-
+            <h4>Corrosion Resistance</strong></h4>
+            <p>The corrosion resistance of CZ108/CW508L is good to excellent in most environments. It is not suited for use with acetic acid, moist ammonia or ammonia compounds, hydrochloric acid and nitric acid.</p>
+        </div>
     </div>
 </div>
