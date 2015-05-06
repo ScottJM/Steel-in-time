@@ -7,6 +7,7 @@ App.
         $scope.cuts = [];
         $scope.grades = [];
             $scope.alert = null;
+            $scope.coupon = null;
 
         $scope.selected = {
             metal: null,
@@ -116,7 +117,7 @@ App.
             $location.url('/product/'+product.id+'/view');
         };
         $scope.viewMetal = function(metal) {
-            console.log('/metal/'+metal.id+'/view');
+
             $location.url('/metal/'+metal.id+'/view');
         };
         $scope.viewCut = function(cut) {
@@ -131,8 +132,41 @@ App.
 
 
     })
-    .controller('CartCtrl', function($scope, $modal, $log, Product, $location) {
+    .controller('CartCtrl', function($scope, $modal, $log, Product, $location, Coupon) {
 
+        $scope.couponName = null;
+
+        $scope.discountTotal = function() {
+            var total = $scope.cartTotal();
+            if($scope.coupon) {
+                if($scope.coupon.amount_off > 0) {
+                    return $scope.coupon.amount_off;
+                } else if($scope.coupon.percent_off > 0) {
+                    return total / $scope.coupon.percent_off;
+                }
+            }
+            return 0;
+        };
+
+        $scope.deliveryTotal = function(){
+            return 19.99;
+        };
+
+        $scope.grandTotal = function(){
+            var total = $scope.cartTotal();
+            var disc = $scope.discountTotal();
+            var delivery = $scope.deliveryTotal();
+
+            return (total - disc) + delivery;
+        };
+
+        $scope.updateCoupon = function() {
+
+            $scope.coupon = Coupon.get({id:$scope.couponName}, function(r){
+                $scope.coupon = r;
+            });
+
+        };
 
     })
     .controller('ProductSingleCtrl', function($scope, $modal, $log, Product, $location, $routeParams) {
@@ -154,6 +188,32 @@ App.
     .controller('ContactCtrl', function($scope, $modal, $log, Product, $location) {
 
 
+
+    })
+    .controller('CheckoutCtrl', function($scope, $modal, $log, Product, $location, $http) {
+
+        $scope.loginData = {};
+
+        $scope.submitLogin = function() {
+            $http({
+                method  : 'POST',
+                url     : 'process.php',
+                data    : $scope.loginData,  // pass in data as strings
+                headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
+            })
+                .success(function(data) {
+                    console.log(data);
+
+                    if (!data.success) {
+                        // if not successful, bind errors to error variables
+                        $scope.errorName = data.errors.name;
+                        $scope.errorSuperhero = data.errors.superheroAlias;
+                    } else {
+                        // if successful, bind success message to message
+                        $scope.message = data.message;
+                    }
+                });
+        }
 
     })
     .controller('HomeCtrl', function($scope, $modal, $log, Product, $location) {

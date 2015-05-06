@@ -56,4 +56,11 @@ angular.module('SIT.services', [])
                 isArray:true
             }
         });
+    })
+    .factory('Coupon', function($resource) {
+        return $resource('/store/coupon/:id', { id: '@id' }, {
+            update: {
+                method: 'PUT' // this method issues a PUT request
+            }
+        });
     });
