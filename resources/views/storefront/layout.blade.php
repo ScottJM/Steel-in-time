@@ -55,12 +55,12 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Steel In Time</a>
+				<a class="navbar-brand" href="{{ url('/store/#home') }}">Steel In Time</a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav pjax" id="main-nav">
-					<li><a href="{{ url('/store/') }}"><span>Home</span></a></li>
+					<li><a href="{{ url('/store/#home') }}"><span>Home</span></a></li>
 					<li><a href="{{ url('/store/#about') }}"><span>About</span></a></li>
 					<li><a href="{{ url('/store/#contact') }}"><span>Contact</span></a></li>
 

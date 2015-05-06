@@ -10,11 +10,9 @@ class CouponsController extends Controller {
 
 	protected $rules = [
 		'short_name' => ['required'],
-		'description' => ['min:0', 'max:124'],
-		'percent_off' => ['required','min:1', 'max:2'],
-		'amount_off' => ['required', 'min:1', 'max:9999'],
-		'start_at' => ['required'],
-		'expiry_at' => ['required']
+		'percent_off' => ['min:1', 'max:2'],
+		'amount_off' => [ 'min:1', 'max:9999'],
+
 	];
 
 	protected $defaultPerPage = 10;
@@ -46,11 +44,18 @@ class CouponsController extends Controller {
 	/**
 	 * Store a newly created resource in storage.
 	 *
+	 * @param Request $request
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
-		//
+		$this->validate($request, $this->rules);
+
+		Coupon::create( $request->all() );
+
+		\Flash::success('You have added a coupon!');
+
+		return redirect('coupons');
 	}
 
 	/**
@@ -79,7 +84,6 @@ class CouponsController extends Controller {
 	public function edit($id)
 	{
 		$coupon = Coupon::findOrFail($id);
-
 
 		return view('coupons.edit', compact('coupon'));
 	}
