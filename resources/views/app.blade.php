@@ -81,7 +81,7 @@
         @yield('content')
 
     <script>
-        $(document).pjax('.pjax a, a', '#pjax-container', {
+        $(document).pjax('.pjax a', '#pjax-container', {
             timeout:2000
         })
     </script>
