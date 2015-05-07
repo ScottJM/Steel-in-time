@@ -17,6 +17,10 @@ App.config(['$routeProvider',
                 templateUrl: '/template/cart.html',
                 controller: 'CartCtrl'
             }).
+            when('/checkout', {
+                templateUrl: '/template/checkout.html',
+                controller: 'CheckoutCtrl'
+            }).
             when('/product/:productId/view', {
                 templateUrl: '/template/product-single.html',
                 controller: 'ProductSingleCtrl'

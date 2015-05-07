@@ -27,7 +27,45 @@
                     </div>
  					{!! BootForm::open() !!}
 
-                    {!! $coupons->render() !!}
+					<table class="table table-striped">
+						<thead>
+						<tr>
+							<th width="2%"></th>
+							<th width="2%">#</th>
+							<th>Name</th>
+							<th>Description</th>
+							<th>Discount</th>
+							<th></th>
+						</tr>
+						</thead>
+						<tbody>
+
+						@foreach($coupons as $k => $coupon)
+							<tr>
+								<td><input type="checkbox" name="delete[]" value="{{ $coupon->id }}"/></td>
+								<th scope="row">{{ $coupon->id }}</th>
+								<td>{{ $coupon->short_name }}</td>
+								<td>{{ $coupon->description }}</td>
+								<td>
+									@if($coupon->percent_off)
+										{{ $coupon->percent_off  }}%
+									@else
+										£{{ $coupon->amount_off }}
+									@endif
+								</td>
+
+								<td>
+
+								</td>
+								<td align="right"><a class="btn btn-default btn-xs" href="/coupon/{{ $coupon->id }}/edit">edit</a></td>
+
+							</tr>
+						@endforeach
+						</tbody>
+					</table>
+
+
+				{!! $coupons->render() !!}
 
  					{!! BootForm::close() !!}
 					<div>
