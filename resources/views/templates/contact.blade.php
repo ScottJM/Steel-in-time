@@ -1,5 +1,5 @@
 <div>
-    <h3 class="red-head">Contact us</h3>
+    <h1 class="red-head">Contact us</h1>
     <div class="row">
         <div class="col-md-9">
             <p>We’re here to answer any questions you may have about our products and services. Reach out to us and we’ll respond
