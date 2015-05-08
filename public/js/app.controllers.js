@@ -317,7 +317,7 @@ App.
                 title: 'Stainless Steel Flat bar',
                 text: 'We have just opened a brand new range of Stainless Steel products. To see products such as Stainless Steel Flat Bar click the button below.',
                 button: 'View Product',
-                buttonlink: '/store/#/about'
+                buttonlink: '/store/#/product/2/view'
             }
 
         ];
