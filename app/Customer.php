@@ -45,4 +45,9 @@ class Customer extends Model {
         return $this->belongsTo('SIT\User');
 	}
 
+    public function orders()
+    {
+        return $this->hasMany('SIT\Orders');
+    }
+
 }
