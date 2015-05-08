@@ -46,7 +46,6 @@
 							<td>{{ $order->customer_id }}</td>
 							<td>{{ $order->payment_method }}</td>
 							<td>{{ $order->amount_paid }}</td>
-							<td>{{ $order->status}}</td>
 							<td>*
 								@if($order->status == 1)
 									<i class="glyphicon glyphicon-ok text-success"></i>
