@@ -41,7 +41,7 @@ class ProductController extends Controller {
             $array = new Collection( Products::where("metal_type_id", "=", $metal )->lists('grade') );
         }
 
-        return $array->unique()->toArray();
+        return array_values($array->unique()->toArray());
     }
 
 	/**
