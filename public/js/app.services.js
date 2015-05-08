@@ -15,6 +15,7 @@ angular.module('SIT.services', [])
                 method: 'GET',
                 url: '/store/product/grades',
                 responseType: 'json',
+                isArray:true
             }
         });
     })
