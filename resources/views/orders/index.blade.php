@@ -31,15 +31,10 @@
 					<tr>
 						<th></th>
 						<th>#</th>
-						<th>Metal</th>
-						<th>Cut</th>
-						<th>Grade</th>
-						<th>Width (mm)</th>
-						<th>Height (mm)</th>
-						<th>Length (mm)</th>
-						<th>Price</th>
-						<th>In stock?</th>
-						<th></th>
+						<th>Customer ID</th>
+						<th>Payment Method</th>
+						<th>Amount Paid</th>
+						<th>Order Status (Sent?)</th>
 					</tr>
 					</thead>
 					<tbody>
@@ -48,9 +43,10 @@
 						<tr>
 							<td><input type="checkbox" name="delete[]" value="{{ $order->id }}"/></td>
 							<th scope="row">{{ $order->id }}</th>
+							<td>{{ $order->customer_id }}</td>
 							<td>{{ $order->payment_method }}</td>
-							<td>{{ $order->status}}</td>
 							<td>{{ $order->amount_paid }}</td>
+							<td>{{ $order->status}}</td>
 							<td>*
 								@if($order->in_stock == 1)
 									<i class="glyphicon glyphicon-ok text-success"></i>
