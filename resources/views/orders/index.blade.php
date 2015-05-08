@@ -26,6 +26,45 @@
 
                     </div>
  					{!! BootForm::open() !!}
+				<table class="table table-striped">
+					<thead>
+					<tr>
+						<th></th>
+						<th>#</th>
+						<th>Metal</th>
+						<th>Cut</th>
+						<th>Grade</th>
+						<th>Width (mm)</th>
+						<th>Height (mm)</th>
+						<th>Length (mm)</th>
+						<th>Price</th>
+						<th>In stock?</th>
+						<th></th>
+					</tr>
+					</thead>
+					<tbody>
+
+					@foreach($orders as $k => $order)
+						<tr>
+							<td><input type="checkbox" name="delete[]" value="{{ $order->id }}"/></td>
+							<th scope="row">{{ $order->id }}</th>
+							<td>{{ $order->payment_method }}</td>
+							<td>{{ $order->status}}</td>
+							<td>{{ $order->amount_paid }}</td>
+							<td>*
+								@if($order->in_stock == 1)
+									<i class="glyphicon glyphicon-ok text-success"></i>
+								@else
+									<i class="glyphicon glyphicon-remove text-danger"></i>
+
+								@endif
+							</td>
+							<td  align="right"><a class="btn btn-default btn-xs" href="/products/{{ $order->id }}/edit">edit</a></td>
+
+						</tr>
+					@endforeach
+					</tbody>
+				</table>
 
                     {!! $orders->render() !!}
 
