@@ -20,7 +20,7 @@
             <h3 class="red-head">Coupon</h3>
             <div class="row">
                 <div class="col-xs-3">
-                    <input class="form-control" type="text" ng-model="couponName" ng-blur="updateCoupon()" ng-disabled="coupon && coupon.id > 0"/>
+                    <input class="form-control" type="text" ng-model="$parent.couponName" ng-blur="updateCoupon()" ng-disabled="coupon && coupon.id > 0"/>
                 </div>
             </div>
             <div class="text-center text-muted" ng-show="!cartItems.length">

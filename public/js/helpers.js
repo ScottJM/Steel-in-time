@@ -9,7 +9,6 @@ $(function(){
         },
         select: function( event, ui ) {
             $( this ).val( ui.item.label );
-            console.log('item', ui.item);
 
             return false;
         }

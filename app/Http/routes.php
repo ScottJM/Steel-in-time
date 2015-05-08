@@ -8,6 +8,10 @@ Route::get('login', 'Auth\AuthController@getLogin');
 Route::get('logout', 'Auth\AuthController@getLogout');
 
 Route::get('store/product/grades', 'Storefront\ProductController@grades');
+Route::get('store/get-current-user', 'Storefront\AuthController@currentUser');
+Route::post('store/auth', 'Storefront\AuthController@check');
+Route::post('store/payment/make', 'Storefront\PaymentController@make');
+
 Route::resource('store/product', 'Storefront\ProductController');
 Route::resource('store/cart', 'Storefront\CartController');
 Route::resource('store/metal', 'Storefront\MetalController');

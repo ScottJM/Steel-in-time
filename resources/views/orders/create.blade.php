@@ -211,17 +211,6 @@
             var $customer_id = $('input[name=customer_id]');
 
             if($customer_id.val().length == 0 ){
-
-                $('#new_customer').fadeIn(300);
-            } else {
-                $('#new_customer').hide();
-            }
-
-        $( "#customer_name").bind('blur', function(){
-
-            var $customer_id = $('input[name=customer_id]');
-            console.log($customer_id.val().length)
-            if($customer_id.val().length == 0 ){
                 console.log('a')
                 $('#new_customer').fadeIn(300);
             } else {
@@ -240,9 +229,6 @@
             },
             select: function( event, ui ) {
                 var item = ui.item;
-                $( "#customer_name" ).val( item.first_name + " "+item.last_name).attr('readonly', 'readonly').bind('dblclick' ,function(){
-                    $(this).removeAttr('readonly').val('');
-
                 $( "#customer_name" ).val( item.first_name + " "+item.last_name).attr('disabled', 'disabled').bind('dblclick' ,function(){
                     $(this).removeAttr('disabled').val('');
                 });
