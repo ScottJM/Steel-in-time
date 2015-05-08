@@ -29,6 +29,10 @@ App.config(['$routeProvider',
                 templateUrl: '/template/metal-single.html',
                 controller: 'MetalSingleCtrl'
             }).
+            when('/cut/:cutId/view', {
+                templateUrl: '/template/metal-single.html',
+                controller: 'CutSingleCtrl'
+            }).
             otherwise({
                 redirectTo: '/home'
             });
