@@ -46,12 +46,11 @@
 							<td>{{ $order->customer_id }}</td>
 							<td>{{ $order->payment_method }}</td>
 							<td>{{ $order->amount_paid }}</td>
-							<td>*
+							<td>
 								@if($order->status == 1)
 									<i class="glyphicon glyphicon-ok text-success"></i>
 								@else
 									<i class="glyphicon glyphicon-remove text-danger"></i>
-
 								@endif
 							</td>
 							<td  align="right"><a class="btn btn-default btn-xs" href="/products/{{ $order->id }}/edit">edit</a></td>
