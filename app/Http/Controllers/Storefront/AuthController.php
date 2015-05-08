@@ -12,6 +12,7 @@ class AuthController extends Controller {
     public function check()
     {
         $req = Input::all();
+        dd($req);
         $mod = array_keys($req);
         $data = (array) json_decode($mod[0]);
 
