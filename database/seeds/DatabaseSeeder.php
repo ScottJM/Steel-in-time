@@ -18,8 +18,6 @@ class DatabaseSeeder extends Seeder {
 
 		$this->call('CutTypeTableSeeder');
 
-
-
 		//$this->call('ProductTableSeeder');
 
 	}

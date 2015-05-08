@@ -59,7 +59,6 @@
 					@endforeach
 					</tbody>
 				</table>
-
                     {!! $orders->render() !!}
 
  					{!! BootForm::close() !!}
@@ -97,5 +96,4 @@ $(function(){
 
 });
 </script>
-
 @endsection

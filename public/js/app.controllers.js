@@ -1,13 +1,15 @@
 App.
-    controller('AppCtrl', ['$scope', 'Product','Metal','Cut','CartItem','$location',
-        function($scope, Product, Metal, Cut, CartItem, $location) {
+    controller('AppCtrl', ['$scope', 'Product','Metal','Cut','CartItem','$location','$http','Coupon',
+        function($scope, Product, Metal, Cut, CartItem, $location,$http,Coupon) {
 
         $scope.products = Product.query();
         $scope.metals = Metal.query();
         $scope.cuts = [];
+        $scope.user = null;
         $scope.grades = [];
             $scope.alert = null;
             $scope.coupon = null;
+            $scope.couponName = null;
 
         $scope.selected = {
             metal: null,
@@ -39,6 +41,20 @@ App.
 
         };
 
+        $scope.getCurrentUser = function() {
+            $http({
+                method  : 'GET',
+                url     : '/store/get-current-user'
+            })
+                .success(function(data) {
+                    if(data.user) {
+                        $scope.user = data.user;
+                    }
+
+                });
+        };
+
+        $scope.getCurrentUser();
 
 
         $scope.removeCartItem = function(item) {
@@ -126,7 +142,42 @@ App.
         $scope.refreshCart();
 
 
-    }])
+
+            $scope.discountTotal = function() {
+                var total = $scope.cartTotal();
+                if($scope.coupon) {
+                    if($scope.coupon.amount_off > 0) {
+                        return $scope.coupon.amount_off;
+                    } else if($scope.coupon.percent_off > 0) {
+                        return total / $scope.coupon.percent_off;
+                    }
+                }
+                return 0;
+            };
+
+            $scope.deliveryTotal = function(){
+                return 19.99;
+            };
+
+            $scope.grandTotal = function(){
+                var total = $scope.cartTotal();
+                var disc = $scope.discountTotal();
+                var delivery = $scope.deliveryTotal();
+
+                return (total - disc) + delivery;
+            };
+
+            $scope.updateCoupon = function() {
+
+                $scope.coupon = Coupon.get({id:$scope.couponName}, function(r){
+                    $scope.coupon = r;
+                });
+
+            };
+
+
+
+        }])
     .controller('ProductSearchCtrl', function($scope, $modal, $log, Product, $location) {
 
 
@@ -134,39 +185,6 @@ App.
     })
     .controller('CartCtrl', function($scope, $modal, $log, Product, $location, Coupon) {
 
-        $scope.couponName = null;
-
-        $scope.discountTotal = function() {
-            var total = $scope.cartTotal();
-            if($scope.coupon) {
-                if($scope.coupon.amount_off > 0) {
-                    return $scope.coupon.amount_off;
-                } else if($scope.coupon.percent_off > 0) {
-                    return total / $scope.coupon.percent_off;
-                }
-            }
-            return 0;
-        };
-
-        $scope.deliveryTotal = function(){
-            return 19.99;
-        };
-
-        $scope.grandTotal = function(){
-            var total = $scope.cartTotal();
-            var disc = $scope.discountTotal();
-            var delivery = $scope.deliveryTotal();
-
-            return (total - disc) + delivery;
-        };
-
-        $scope.updateCoupon = function() {
-
-            $scope.coupon = Coupon.get({id:$scope.couponName}, function(r){
-                $scope.coupon = r;
-            });
-
-        };
 
     })
     .controller('ProductSingleCtrl', function($scope, $modal, $log, Product, $location, $routeParams) {
@@ -190,14 +208,38 @@ App.
 
 
     })
-    .controller('CheckoutCtrl', function($scope, $modal, $log, Product, $location, $http) {
+    .controller('CheckoutCtrl', function($scope, $modal, $log, Product, $location, $http, stripe) {
 
         $scope.loginData = {};
+        $scope.card = {};
+        $scope.payment = {};
+
+        $scope.checkoutStage = 1;
+
+        $scope.guestCheckout = false;
+        $scope.customer = null;
+
+        $scope.changeGuestCheckout = function (value) {
+            $scope.guestCheckout = value;
+        };
+        if($scope.user) {
+            $scope.guestCheckout = true;
+            $scope.checkoutStage = 2;
+            $scope.customer = $scope.user.customer;
+        }
+
+        $scope.submitDetails = function () {
+            $scope.checkoutStage = 3;
+
+
+        };
+
+        $scope.sendingPayment = false;
 
         $scope.submitLogin = function() {
             $http({
                 method  : 'POST',
-                url     : 'process.php',
+                url     : '/store/auth',
                 data    : $scope.loginData,  // pass in data as strings
                 headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
             })
@@ -206,19 +248,63 @@ App.
 
                     if (!data.success) {
                         // if not successful, bind errors to error variables
-                        $scope.errorName = data.errors.name;
-                        $scope.errorSuperhero = data.errors.superheroAlias;
+                        $scope.error = data.error;
+
                     } else {
+
+                        if(data.user) {
+                            $scope.user = data.user;
+                        }
                         // if successful, bind success message to message
-                        $scope.message = data.message;
+                        $scope.checkoutStage = 2;
                     }
                 });
-        }
+        };
+
+        $scope.charge = function () {
+            $scope.payment.card = $scope.card;
+            $scope.payment.coupon = $scope.couponName;
+            $scope.payment.amount = $scope.grandTotal();
+            $scope.error = null;
+            $scope.sendingPayment = true;
+            return stripe.card.createToken($scope.payment.card)
+                .then(function (token) {
+                    console.log('token created for card ending in ', token.card.last4);
+                    var payment = angular.copy($scope.payment);
+                    payment.card = void 0;
+                    payment.token = token.id;
+                    payment.customer = $scope.customer;
+                    payment.user = $scope.user;
+                    return $http.post('/store/payment/make', payment)
+                        .success(function(r){
+                            $scope.sendingPayment = false;
+                            if(r.error) {
+                                $scope.error = r.error;
+                            } else {
+
+
+                                $scope.order = r.order;
+                                $scope.checkoutStage = 4;
+                            }
+                        });
+                })
+                .then(function (payment) {
+                    console.log('successfully submitted payment for $', $scope.payment.amount);
+                })
+                .catch(function (err) {
+                    if (err.type && /^Stripe/.test(err.type)) {
+                        console.log('Stripe error: ', err.message);
+                    }
+                    else {
+                        console.log('Other error occurred, possibly with your API', err.message);
+                    }
+                });
+        };
 
     })
     .controller('HomeCtrl', function($scope, $modal, $log, Product, $location) {
 
-        $scope.myInterval = 10000;
+        $scope.myInterval = 5000;
 
         $scope.slides = [
             {
@@ -236,7 +322,5 @@ App.
             }
 
         ];
-
-
 
     });

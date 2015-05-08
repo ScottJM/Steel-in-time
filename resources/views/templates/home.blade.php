@@ -124,6 +124,15 @@
 <div id="help">
     <h4>We're here to help</h4>
     <p>Constructing, building and doing it yourself can be difficult when you’re unsure what metal is best fit for the job. Choose a metal below for more
-        information on its best use, common usage and its properties.</p>
-    @include('storefront.metalinfo')
+        information on its best use, common usage, properties.</p>
+    <p>
+    <div class="btn-group" dropdown >
+        <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle >
+            Choose metal <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li ng-repeat="metal in metals"><a href="" ng-click="viewMetal(metal) ">@{{ metal.name }}</a></li>
+        </ul>
+    </div>
+    </p>
 </div>

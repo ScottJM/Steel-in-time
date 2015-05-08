@@ -32,6 +32,12 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 */
 	protected $hidden = ['password', 'remember_token'];
 
+
+    public function customer()
+    {
+        return $this->hasOne('SIT\Customer');
+    }
+
     public static function temporaryPassword()
     {
         $alphabet = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789";

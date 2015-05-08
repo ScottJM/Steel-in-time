@@ -54,8 +54,6 @@
 					<li><a href="{{ url('/orders') }}">Orders</a></li>
 					<li><a href="{{ url('/coupons') }}">Coupons</a></li>
 					<li><a href="{{ url('/customers') }}">Customers</a></li>
-
-
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
@@ -80,10 +78,11 @@
 
         @yield('content')
 
-    <script>
-        $(document).pjax('.pjax a', '#pjax-container', {
-            timeout:2000
-        })
-    </script>
+	<script>
+		$(document).pjax('.pjax a', '#pjax-container', {
+			timeout:2000
+		})
+	</script>
 </body>
 </html>
+

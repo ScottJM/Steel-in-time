@@ -31,12 +31,15 @@
 	<script src="{{ asset('/assets/vendor/jquery-ui/jquery-ui.min.js') }}"></script>
 	<script src="{{ asset('/assets/vendor/jquery-pjax/jquery.pjax.js') }}"></script>
 	<script src="/assets/vendor/select2/select2.min.js"></script>
+	<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 	<script src="/assets/vendor/angular/angular.min.js"></script>
 	<script src="/assets/vendor/angular-route/angular-route.min.js"></script>
 	<script src="/assets/vendor/angular-bootstrap/ui-bootstrap.min.js"></script>
 	<script src="/assets/vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 	<script src="/assets/vendor/angular-resource/angular-resource.min.js"></script>
 	<script src="/assets/vendor/angular-bootstrap-show-errors/src/showErrors.min.js"></script>
+	<script src="/assets/vendor/angular-stripe/release/angular-stripe.js"></script>
+
 	<script src="/js/helpers.js"></script>
 	<script src="/js/app.js"></script>
 	<script src="/js/app.services.js"></script>
@@ -88,7 +91,7 @@
 			</div>
 		</div>
 	</nav>
-    <div class="alert alert-success" ng-show="alert != null" >@{{ alert.text }} <a href="" ng-click="alert.action()" class="alert-link" ng-show="alert.action">[@{{ alert.actionLabel }}]</a></div>
+    <div class="alert alert-success" ng-show="alert != null" ng-cloak>@{{ alert.text }} <a href="" ng-click="alert.action()" class="alert-link" ng-show="alert.action">[@{{ alert.actionLabel }}]</a></div>
 
 
         @yield('content')
