@@ -203,6 +203,14 @@ App.
 
 
     })
+    .controller('CutSingleCtrl', function($scope, $modal, $log, Product, Metal, $location, $routeParams) {
+
+        var id = $routeParams.cutId;
+        $scope.cut = id;
+
+
+
+    })
     .controller('ContactCtrl', function($scope, $modal, $log, Product, $location) {
 
 

@@ -67,7 +67,7 @@ class PaymentController extends Controller {
                             'qty' => $item->quantity,
                         ]);
                     }
-
+                    \Cart::clear();
                     return [
                         'success' => true,
                         'customer' => $customer,

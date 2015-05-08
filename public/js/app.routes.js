@@ -30,7 +30,7 @@ App.config(['$routeProvider',
                 controller: 'MetalSingleCtrl'
             }).
             when('/cut/:cutId/view', {
-                templateUrl: '/template/metal-single.html',
+                templateUrl: '/template/cut-page.html',
                 controller: 'CutSingleCtrl'
             }).
             otherwise({
