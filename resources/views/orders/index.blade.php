@@ -48,7 +48,7 @@
 							<td>{{ $order->amount_paid }}</td>
 							<td>{{ $order->status}}</td>
 							<td>*
-								@if($order->in_stock == 1)
+								@if($order->status == 1)
 									<i class="glyphicon glyphicon-ok text-success"></i>
 								@else
 									<i class="glyphicon glyphicon-remove text-danger"></i>
